@@ -1,0 +1,25 @@
+name: hexa
+recipe: drupal9
+config:
+  php: '7.4'
+  #composer_version: '2.0.7'
+  via: apache:2.4
+  webroot: docroot
+  database: mysql:5.7
+  #drush: false
+  xdebug: true
+  #config:
+    #database: SEE BELOW
+    #php: SEE BELOW
+    #server: SEE BELOW
+    #vhosts: SEE BELOW
+proxy:
+  appserver:
+    - hexa.lndo.site
+#services:
+  #appserver:
+    #build:
+      #- composer install
+  #redis:
+    #type: redis
+    #portforward: true
