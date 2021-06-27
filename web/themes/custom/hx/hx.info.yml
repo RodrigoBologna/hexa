@@ -1,10 +1,24 @@
 name: Hexentials
 type: theme
-description: 'The main theme for Hexentials project.'
+base theme: bootstrap
+core: 8.x
 core_version_requirement: ^8 || ^9
-base theme: classy
+description: 'A Drupal Bootstrap 3 based sub-theme for Hexentials project.'
+package: 'Bootstrap'
+
 regions:
-  header: Header
-  content: Content
-  sidebar_first: 'Sidebar first'
-  footer: Footer
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries-extend:
+  bootstrap/framework:
+    - hx/framework
