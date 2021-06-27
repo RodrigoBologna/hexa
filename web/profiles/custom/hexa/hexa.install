@@ -10,6 +10,9 @@ use Drupal\Core\File\FileSystemInterface;
 
 /**
  * Implements hook_install_tasks_alter().
+ *
+ * @TODO: this is being executed during each task. We need to make it run only
+ * once.
  */
 function hexa_install_tasks_alter(&$tasks, $install_state) {
   $tasks['install_download_translation']['function'] = 'hexa_install_download_translation';

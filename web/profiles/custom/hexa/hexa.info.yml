@@ -60,6 +60,7 @@ install:
   - serialization
   - shortcut
   - syslog
+  - system
   - taxonomy
   - toolbar
   - views
@@ -144,6 +145,7 @@ dependencies:
 themes:
   # - bartik
   - seven
+  - bootstrap
   - hx
 
 interface translation project: hexa
