@@ -1,0 +1,171 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Hexentials install profile.
+ */
+
+define('HEXA_DEFAULT_TRANSLATION_FILENAME', 'drupal-9.2.0.pt-br.po');
+
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function hexa_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_download_translation']['function'] = 'hexa_install_download_translation';
+}
+
+/**
+ * Prepare the default translation file.
+ *
+ * @see install_check_translations().
+ */
+function hexa_install_download_translation(&$install_state) {
+  $site_path = \Drupal::service('site.path');
+  $files_directory = $site_path . '/files';
+  $translations_directory = $site_path . '/files/translations';
+
+  // First attempt to create or make writable the files directory.
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $file_system->prepareDirectory($files_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  // Then, attempt to create or make writable the translations directory.
+  $file_system->prepareDirectory($translations_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  if ($existing_file = glob($translations_directory . '/' . HEXA_DEFAULT_TRANSLATION_FILENAME)) {
+    return;
+  }
+
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hexa'));
+  $translation_file_path = \Drupal::service('file_system')->realpath('public://translations');
+
+  copy($profile_path . '/translations/' . HEXA_DEFAULT_TRANSLATION_FILENAME, $translation_file_path . '/' . HEXA_DEFAULT_TRANSLATION_FILENAME);
+  var_dump('xxx'); die;
+
+  install_goto(install_redirect_url($install_state));
+}
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function hexa_install() {
+  // First, do everything in standard profile.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  standard_install();
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function hexa_install_tasks(&$install_state) {
+  $tasks = [
+    'hexa_select_profile_type' => [
+      'display_name' => t('Select the profile type'),
+      'type' => 'form',
+      'function' => 'Drupal\hexa\Form\ProfileTypeForm',
+    ],
+    'hexa_define_theme' => [
+      'display_name' => t('Enable the default theme'),
+      'type' => 'normal',
+    ],
+    'hexa_prepare_menu_structure' => [
+      'display_name' => t('Prepare the menu structure'),
+      'type' => 'normal',
+    ],
+    'hexa_client_settings_form' => [
+      'display_name' => t('Define the client settings'),
+      'type' => 'form',
+      'function' => 'Drupal\hexa\Form\ClientSettingsForm',
+    ],
+    'hexa_import_default_content' => [
+      'display_name' => t('Install default content'),
+      'type' => 'normal',
+    ],
+    'hexa_optimization' => [
+      'display_name' => t('Configure the optimization-related options'),
+      'type' => 'normal',
+    ],
+    // We need to create the store for both profile types as at this point the
+    // list of install tasks can't be changed.
+    'hexa_run_profile_tasks' => [
+      'display_name' => t('Run the tasks based on the profile type'),
+      'type' => 'normal',
+    ],
+  ];
+
+  return $tasks;
+}
+
+/**
+ * Callback function to enable the default theme.
+ *
+ * @see hexa_install_tasks()
+ */
+function hexa_define_theme() {
+  \Drupal::configFactory()->getEditable('system.theme')->set('default', 'hx')->save();
+}
+
+/** Callback function to prepare the theme structure.
+ *
+ * @see hexa_install_tasks()
+ */
+function hexa_prepare_menu_structure() {
+  \Drupal::service('router.builder')->rebuildIfNeeded();
+}
+
+/**
+ * Callback function to install default profile content.
+ *
+ * @see hexa_install_tasks()
+ */
+function hexa_import_default_content() {
+  if (\Drupal::state()->get('profile_type') == 'brochure') {
+    #\Drupal::service('default_content.importer')->importContent('hexa_brochure_default_content');
+    #\Drupal::service('module_installer')->uninstall(['hexa_commerce_default_content']);
+
+    return;
+  }
+
+  #\Drupal::service('default_content.importer')->importContent('hexa_commerce_default_content');
+  #\Drupal::service('module_installer')->uninstall(['hexa_brochure_default_content']);
+}
+
+/**
+ * Configure optimization-related options.
+ */
+function hexa_optimization() {
+  // Force the minifier to use the C compile version of JSMin as the config
+  // isn't working properly.
+  #\Drupal::configFactory()->getEditable('advagg_js_minify.settings')->set('minifier', 3)->save();
+}
+
+/**
+ * Run the tasks based on the profile type.
+ *
+ * @see hexa_install_tasks()
+ */
+function hexa_run_profile_tasks(&$tasks) {
+  $profile_type = \Drupal::state()->get('profile_type');
+  $function_name = sprintf('hexa_prepare_%s_profile_type', $profile_type);
+
+  $function_name();
+}
+
+/**
+ * Prepare the brochure profile type.
+ */
+function hexa_prepare_brochure_profile_type() {
+
+}
+
+/**
+ * Prepare the commerce profile type.
+ */
+function hexa_prepare_commerce_profile_type() {
+
+}
