@@ -6,20 +6,17 @@ config:
   via: apache:2.4
   webroot: web
   database: mysql:5.7
-  #drush: false
+  drush: true
   xdebug: true
-  #config:
-    #database: SEE BELOW
-    #php: SEE BELOW
-    #server: SEE BELOW
-    #vhosts: SEE BELOW
+  config:
+      php: .vscode/php.ini
 proxy:
   appserver:
     - hexa.lndo.site
-#services:
-  #appserver:
-    #build:
-      #- composer install
+services:
+  appserver:
+    build:
+      - composer install
   #redis:
     #type: redis
     #portforward: true
