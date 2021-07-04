@@ -44,7 +44,6 @@ function hexa_install_download_translation(&$install_state) {
   $translation_file_path = \Drupal::service('file_system')->realpath('public://translations');
 
   copy($profile_path . '/translations/' . HEXA_DEFAULT_TRANSLATION_FILENAME, $translation_file_path . '/' . HEXA_DEFAULT_TRANSLATION_FILENAME);
-  var_dump('xxx'); die;
 
   install_goto(install_redirect_url($install_state));
 }
