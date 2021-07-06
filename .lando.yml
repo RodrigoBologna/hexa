@@ -9,7 +9,7 @@ config:
   drush: true
   xdebug: true
   config:
-      php: .vscode/php.ini
+      php: .lando/php.ini
 proxy:
   appserver:
     - hexa.lndo.site
