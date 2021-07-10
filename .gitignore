@@ -1,7 +1,8 @@
 # Ignore VSCode-related files.
 .vscode
 
-# Ignore Lando-related files.
+# Ignore DDEV-related files.
+.ddev
 
 # Ignore the vendor folder.
 vendor
