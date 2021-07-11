@@ -5,8 +5,8 @@ dependencies:
     - hx
 id: hx_local_actions
 theme: hx
-region: header
-weight: 20
+region: content
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

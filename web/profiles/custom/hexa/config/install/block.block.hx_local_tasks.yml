@@ -5,8 +5,8 @@ dependencies:
     - hx
 id: hx_local_tasks
 theme: hx
-region: header
-weight: 10
+region: content
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

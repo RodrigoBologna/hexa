@@ -7,8 +7,8 @@ dependencies:
     - hx
 id: hx_powered
 theme: hx
-region: footer
-weight: -10
+region: footer_secondary
+weight: -6
 provider: null
 plugin: system_powered_by_block
 settings:

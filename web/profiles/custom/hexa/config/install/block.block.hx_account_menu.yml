@@ -9,8 +9,8 @@ dependencies:
     - hx
 id: hx_account_menu
 theme: hx
-region: navigation_collapsible
-weight: 11
+region: header_right
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:
