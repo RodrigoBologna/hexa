@@ -1,12 +1,12 @@
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - hx
 id: hx_page_title
 theme: hx
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

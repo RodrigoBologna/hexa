@@ -51,6 +51,7 @@ install:
   - image
   - language
   - locale
+  - menu_ui
   - options
   - page_cache
   - path

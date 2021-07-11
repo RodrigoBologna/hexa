@@ -9,8 +9,8 @@ dependencies:
     - hx
 id: hx_main_menu
 theme: hx
-region: navigation_collapsible
-weight: 10
+region: header_left
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:

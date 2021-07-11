@@ -7,8 +7,8 @@ dependencies:
     - hx
 id: hx_branding
 theme: hx
-region: navigation
-weight: 0
+region: header
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

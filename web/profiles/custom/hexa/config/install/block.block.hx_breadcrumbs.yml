@@ -7,8 +7,8 @@ dependencies:
     - hx
 id: hx_breadcrumbs
 theme: hx
-region: header
-weight: -100
+region: highlighted
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
