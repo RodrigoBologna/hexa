@@ -8,8 +8,6 @@ dependencies:
     - system
   theme:
     - hx
-_core:
-  default_config_hash: pwSoOa_wmMvhmsVr0XIp3sY60LmdrSGG3CLlJWyktDs
 id: hx_account_menu
 theme: hx
 region: header_right
