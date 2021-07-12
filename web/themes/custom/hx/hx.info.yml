@@ -6,6 +6,9 @@ core_version_requirement: ^8 || ^9
 description: 'A Drupal Bootstrap 3 based sub-theme for Hexentials project.'
 package: 'Bootstrap'
 
+#@TODO: use a custom image to output the Hexentials logo with logo image style.
+#logo: images/logo.png
+
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'

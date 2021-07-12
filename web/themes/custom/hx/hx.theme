@@ -6,3 +6,26 @@
  *
  * Place your custom PHP code in this file.
  */
+
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function hx_preprocess_block(&$variables) {
+  $function_name = sprintf('hx_prepare_%s', $variables['base_plugin_id']);
+
+  if (!function_exists($function_name)) {
+    return;
+  }
+
+  $function_name($variables);
+}
+
+/**
+ *
+ */
+function hx_prepare_system_branding_block(&$variables) {
+  // @TODO: use the image style to retrieve the correct URL.
+  //$variables['site_logo'] = $logo_url;
+}
