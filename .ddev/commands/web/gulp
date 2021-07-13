@@ -1,0 +1,6 @@
+#!/bin/bash
+## Description: Run any gulp task.
+## Usage: gulp [flags] [args]
+## Example: "gulp watch or gulp compile"
+source /etc/profile && cd /var/www/html/web/themes/custom/hx && gulp $@
+
