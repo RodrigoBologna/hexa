@@ -107,7 +107,7 @@ install:
   #- imagemagick # Use this tool instead of GD2.
   #- lazy
   #- linkit
-  #- logo_image_style
+  - logo_image_style
   #- metatag
   #- pathauto
   #- paragraphs

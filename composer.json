@@ -22,6 +22,7 @@
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/logo_image_style": "^2.5",
         "drush/drush": "^10.5"
     },
     "conflict": {
