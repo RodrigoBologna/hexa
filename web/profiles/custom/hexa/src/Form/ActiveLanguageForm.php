@@ -33,7 +33,7 @@ class ActiveLanguageForm extends FormBase {
         'en' => t('English'),
         'pt-br' => t('Portuguese (Brasil)'),
       ],
-      '#default_value' => 'pt-br',
+      '#default_value' => 'en',
     ];
 
     $form['actions']['#type'] = 'actions';
