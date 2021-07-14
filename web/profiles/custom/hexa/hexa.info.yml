@@ -108,18 +108,20 @@ install:
   #- lazy
   #- linkit
   - logo_image_style
-  #- metatag
-  #- pathauto
-  #- paragraphs
+  - metatag
+  - pathauto
+  - paragraphs
   #- quicklink
-  #- redirect
+  - redirect
   #- redis
   # @TODO: temporarily disabled as it needs configuration.
   # - search_api_solr
-  #- simple_sitemap
+  - simple_sitemap
   #- simple_sitemap_views
   #- single_image_formatter # Products thumbnail exhibition.
   #- single_image_formatter_responsive
+  - token
+  - video_embed_field
   #- webp
 # Profile modules
   # - hexa_brochure_default_content
