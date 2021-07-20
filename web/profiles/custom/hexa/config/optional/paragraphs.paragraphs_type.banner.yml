@@ -1,0 +1,10 @@
+uuid: c99a9100-7f0b-4c79-beed-1818de028756
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+icon_uuid: null
+icon_default: null
+description: 'This is a full-width banner.'
+behavior_plugins: {  }

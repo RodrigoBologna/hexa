@@ -1,0 +1,41 @@
+uuid: 4be20930-0422-455d-8b56-f92a3de71852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_doubled.field_banner_doubled_images
+    - field.field.paragraph.banner_doubled.field_banner_doubled_links
+    - paragraphs.paragraphs_type.banner_doubled
+    - responsive_image.styles.wide
+  module:
+    - link
+    - responsive_image
+_core:
+  default_config_hash: ceZAABbVzbOFyJ70zFFoCBAxtkGZNfVDD56Y37ksWoE
+id: paragraph.banner_doubled.default
+targetEntityType: paragraph
+bundle: banner_doubled
+mode: default
+content:
+  field_banner_doubled_images:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: wide
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_banner_doubled_links:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 128
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }
