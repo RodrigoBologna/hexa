@@ -1,0 +1,36 @@
+uuid: 56633394-d4bb-4185-a0f1-6d20f01cf144
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_doubled.field_banner_doubled_images
+    - field.field.paragraph.banner_doubled.field_banner_doubled_links
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.banner_doubled
+  module:
+    - image
+    - link
+id: paragraph.banner_doubled.default
+targetEntityType: paragraph
+bundle: banner_doubled
+mode: default
+content:
+  field_banner_doubled_images:
+    weight: 0
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_doubled_links:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

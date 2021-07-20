@@ -1,0 +1,25 @@
+uuid: c3997f50-3fbb-48c1-8672-162c813a6792
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_doubled_links
+    - paragraphs.paragraphs_type.banner_doubled
+  module:
+    - link
+_core:
+  default_config_hash: wbGRMB7Hd0DYR9Uu7gG1vsGx20VnHrSRaNr_E3kXERE
+id: paragraph.banner_doubled.field_banner_doubled_links
+field_name: field_banner_doubled_links
+entity_type: paragraph
+bundle: banner_doubled
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

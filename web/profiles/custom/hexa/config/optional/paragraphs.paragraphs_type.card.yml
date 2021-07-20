@@ -1,0 +1,10 @@
+uuid: 89a33a0e-3f62-4399-baec-0388e26e3a35
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: Card
+icon_uuid: null
+icon_default: null
+description: 'This is a card to be used with multiple structures (positions).'
+behavior_plugins: {  }

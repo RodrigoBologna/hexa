@@ -1,0 +1,10 @@
+uuid: 512789f0-0642-4466-9028-cb3bc556ded2
+langcode: en
+status: true
+dependencies: {  }
+id: banner_doubled
+label: 'Banner - doubled'
+icon_uuid: null
+icon_default: null
+description: 'This is a half-width doubled banner.'
+behavior_plugins: {  }

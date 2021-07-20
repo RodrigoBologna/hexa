@@ -1,0 +1,21 @@
+uuid: 68fc840f-e093-4748-a756-391c551ccf5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_position
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_card_position
+field_name: field_card_position
+entity_type: paragraph
+bundle: card
+label: Position
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
