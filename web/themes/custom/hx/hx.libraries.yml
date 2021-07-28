@@ -4,7 +4,7 @@ framework:
       css/style.css: {}
 
 # Uncomment for LESS source JavaScript files.
-  js:
+#  js:
 #    bootstrap/js/affix.js: {}
 #    bootstrap/js/alert.js: {}
 #    bootstrap/js/button.js: {}
@@ -19,7 +19,7 @@ framework:
 #    bootstrap/js/transition.js: {}
 
 # Uncomment for SASS source JavaScript files.
-  js:
+#  js:
 #    bootstrap/assets/javascripts/bootstrap/affix.js: {}
 #    bootstrap/assets/javascripts/bootstrap/alert.js: {}
 #    bootstrap/assets/javascripts/bootstrap/button.js: {}
@@ -32,3 +32,19 @@ framework:
 #    bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
 #    bootstrap/assets/javascripts/bootstrap/tab.js: {}
 #    bootstrap/assets/javascripts/bootstrap/transition.js: {}
+
+barba-core:
+  remote: https://github.com/barbajs/barba
+  version: "1.0"
+  license:
+    name: MIT
+    url: https://github.com/barbajs/barba/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/@barba/core: { type: external, minified: true }
+
+barba:
+  js:
+    js/barba.js: {}
+  dependencies:
+    - hx/barba-core

@@ -8,6 +8,9 @@ package: 'Bootstrap'
 
 #@TODO: use a custom image to output the Hexentials logo with logo image style.
 #logo: images/logo.png
+libraries:
+  - hx/barba-core
+  - hx/barba
 
 regions:
   navigation: 'Navigation'
