@@ -1,15 +1,16 @@
+const sass = require('gulp-sass')(require('sass'));
+
 var gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   gulpIf = require('gulp-if'),
   eslint = require('gulp-eslint'),
-  sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant');
 
 gulp.task('imagemin', function () {
-  return gulp.src('./src/images/*')
+  return gulp.src('./images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
@@ -18,12 +19,11 @@ gulp.task('imagemin', function () {
     .pipe(gulp.dest('./images'));
 });
 
-
 gulp.task('sass', function () {
-  gulp.src('./src/sass/**/*.scss')
+  return gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(autoprefixer('last 2 version'))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 version'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
 });
@@ -33,7 +33,7 @@ function isFixed(file) {
 }
 
 gulp.task('eslint', function(){
-  gulp.src(['./src/js/*.js'])
+  return gulp.src(['./js/*.js'])
     .pipe(eslint({
       "extends": "eslint:recommended",
       "env": {
@@ -135,10 +135,10 @@ gulp.task('eslint', function(){
   .pipe(gulpIf(isFixed, gulp.dest('./js/')));;
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('./src/sass/**/*.scss', ['sass']);
-  gulp.watch('./src/js/**/*.js', ['eslint']);
+  gulp.watch('./sass/**/*.scss', gulp.series['sass']);
+  gulp.watch('./js/**/*.js', gulp.series['eslint']);
   gulp.watch(['./css/style.css', './**/*.html.twig', './js/*.js'], function (files){
     livereload.changed(files)
   });

@@ -14,16 +14,31 @@
         return;
       }
 
-      barba.init({});
+      barba.init({
+
+      });
     }
   }
 
   /*
    * Features to run during the page load.
    */
-  Drupal.behaviors.barba = {
+  Drupal.behaviors.transitions = {
     attach: function (context) {
-      Drupal.barba.init();
+      // @TODO: we need to prepare the container and set the proper options
+      // before initializing Barba.
+      // @see https://barba.js.org/docs/getstarted/intro/
+      //Drupal.barba.init();
+
+      $('#fullview').fullView({
+        navbar: '.header',
+        element: 'section',
+        dots: true,
+        dotsPosition: 'right',
+        easing: 'swing',
+        backToTop: true,
+        offset: 0.15, // Percentage considering the vh (viewport height) unit.
+      });
     }
   }
 
