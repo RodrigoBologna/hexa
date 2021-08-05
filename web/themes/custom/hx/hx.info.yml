@@ -8,9 +8,16 @@ package: 'Bootstrap'
 
 #@TODO: use a custom image to output the Hexentials logo with logo image style.
 #logo: images/logo.png
+
+libraries-extend:
+  bootstrap/framework:
+    - hx/framework
+
 libraries:
-  - hx/barba-core
+  - hx/fullview
   - hx/barba
+  - hx/syncscroll
+  - hx/transitions
 
 regions:
   navigation: 'Navigation'
@@ -27,7 +34,3 @@ regions:
   footer_secondary: 'Footer - Secondary'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-
-libraries-extend:
-  bootstrap/framework:
-    - hx/framework

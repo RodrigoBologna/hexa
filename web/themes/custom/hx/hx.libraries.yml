@@ -1,7 +1,7 @@
 framework:
   css:
     theme:
-      css/style.css: {}
+      css/hx.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
@@ -33,9 +33,22 @@ framework:
 #    bootstrap/assets/javascripts/bootstrap/tab.js: {}
 #    bootstrap/assets/javascripts/bootstrap/transition.js: {}
 
-barba-core:
+fullview:
+  #remote: https://github.com/seeratawan01/fullview.js
+  #version: '1.1.2'
+  #license:
+    #name: MIT
+    #url: https://github.com/seeratawan01/fullview.js/blob/master/LICENSE
+    #gpl-compatible: true
+  js:
+    #https://cdn.jsdelivr.net/npm/fullview/dist/fullview.min.js: { type: external, minified: true }
+    js/fullview.js: {}
+  dependencies:
+    - core/jquery
+
+barba:
   remote: https://github.com/barbajs/barba
-  version: "1.0"
+  version: '1.0'
   license:
     name: MIT
     url: https://github.com/barbajs/barba/blob/master/LICENSE
@@ -43,8 +56,20 @@ barba-core:
   js:
     https://cdn.jsdelivr.net/npm/@barba/core: { type: external, minified: true }
 
-barba:
+syncscroll:
+  #remote: https://github.com/asvd/syncscroll
+  #version: '0.0.3'
+  #license:
+    #name: MIT
+    #url: https://github.com/asvd/syncscroll/blob/master/LICENSE
+    #gpl-compatible: true
   js:
-    js/barba.js: {}
+    js/syncscroll.js: {}
+
+transitions:
+  js:
+    js/transitions.js: {}
   dependencies:
-    - hx/barba-core
+    - hx/fullview
+    - hx/barba
+    - hx/syncscroll
