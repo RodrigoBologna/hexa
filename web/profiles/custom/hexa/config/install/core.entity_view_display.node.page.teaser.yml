@@ -1,9 +1,11 @@
+uuid: 52427cea-ac60-4cc0-b09d-3b885855b731
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_components
     - node.type.page
   module:
     - text
@@ -24,4 +26,6 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  field_components: true
+  langcode: true

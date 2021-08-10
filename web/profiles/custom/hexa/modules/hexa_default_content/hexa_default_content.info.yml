@@ -1,0 +1,8 @@
+name: Hexa Default Content
+description: Provides the default content for the Hexa profile.
+package: Administration
+type: module
+core_version_requirement: ^9
+
+dependencies:
+  - default_content
