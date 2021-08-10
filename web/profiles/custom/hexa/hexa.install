@@ -131,15 +131,14 @@ function hexa_prepare_menu_structure() {
  * @see hexa_install_tasks()
  */
 function hexa_import_default_content() {
-  if (\Drupal::state()->get('profile_type') == 'brochure') {
+  \Drupal::service('default_content.importer')->importContent('hexa_default_content');
+
+  #if (\Drupal::state()->get('profile_type') == 'brochure') {
     #\Drupal::service('default_content.importer')->importContent('hexa_brochure_default_content');
     #\Drupal::service('module_installer')->uninstall(['hexa_commerce_default_content']);
 
-    return;
-  }
-
-  #\Drupal::service('default_content.importer')->importContent('hexa_commerce_default_content');
-  #\Drupal::service('module_installer')->uninstall(['hexa_brochure_default_content']);
+    #return;
+  #}
 }
 
 /**

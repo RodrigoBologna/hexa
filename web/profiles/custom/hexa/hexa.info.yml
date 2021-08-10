@@ -37,6 +37,7 @@ install:
   - config
   - config_translation
   - contact
+  - content_moderation
   - content_translation
   - contextual
   # Disabled in favor of syslog.
@@ -51,6 +52,7 @@ install:
   - image
   - language
   - locale
+  - media_library
   - menu_ui
   - options
   - page_cache
@@ -124,8 +126,7 @@ install:
   - video_embed_field
   #- webp
 # Profile modules
-  # - hexa_brochure_default_content
-  # - hexa_commerce_default_content
+  - hexa_default_content
 # Theme-related modules - required for commerce profile type.
   #- commerce
   #- commerce_cart_flyout
@@ -140,7 +141,6 @@ install:
   # - seo_checklist
   # - w3c_validator
 # Custom
-  - hexa_default_content
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
