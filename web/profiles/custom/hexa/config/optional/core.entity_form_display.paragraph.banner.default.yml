@@ -14,8 +14,6 @@ dependencies:
     - image
     - link
     - text
-_core:
-  default_config_hash: EmQPgdDCSZj3KLEJK_-irJzur_Z4P-UJV86f_lDLLbs
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner

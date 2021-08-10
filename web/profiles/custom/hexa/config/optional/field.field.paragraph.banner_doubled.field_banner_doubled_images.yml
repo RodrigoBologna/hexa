@@ -7,15 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.banner_doubled
   module:
     - image
-_core:
-  default_config_hash: ENFHXpImW2K2xLbLLWpohtqzktFX4cxX0UHj9tOnPHk
 id: paragraph.banner_doubled.field_banner_doubled_images
 field_name: field_banner_doubled_images
 entity_type: paragraph
 bundle: banner_doubled
 label: Images
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

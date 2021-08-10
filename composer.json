@@ -21,6 +21,7 @@
         "drupal/bootstrap": "^3.23",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/default_content": "^2.0@alpha",
         "drupal/google_analytics": "^3.1",
         "drupal/logo_image_style": "^2.5",
         "drupal/metatag": "^1.16",
@@ -35,7 +36,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true

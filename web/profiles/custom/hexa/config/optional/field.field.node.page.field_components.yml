@@ -1,0 +1,46 @@
+uuid: e729e9df-8321-46da-bff5-fde4a191849d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.banner_doubled
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner: banner
+      banner_doubled: banner_doubled
+      card: card
+      text: text
+    target_bundles_drag_drop:
+      banner:
+        enabled: true
+        weight: -9
+      banner_doubled:
+        enabled: true
+        weight: -8
+      card:
+        enabled: true
+        weight: -7
+      text:
+        enabled: true
+        weight: -6
+field_type: entity_reference_revisions
