@@ -10,8 +10,6 @@ dependencies:
   module:
     - link
     - responsive_image
-_core:
-  default_config_hash: ceZAABbVzbOFyJ70zFFoCBAxtkGZNfVDD56Y37ksWoE
 id: paragraph.banner_doubled.default
 targetEntityType: paragraph
 bundle: banner_doubled

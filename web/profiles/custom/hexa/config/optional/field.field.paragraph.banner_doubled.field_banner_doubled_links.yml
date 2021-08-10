@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.banner_doubled
   module:
     - link
-_core:
-  default_config_hash: wbGRMB7Hd0DYR9Uu7gG1vsGx20VnHrSRaNr_E3kXERE
 id: paragraph.banner_doubled.field_banner_doubled_links
 field_name: field_banner_doubled_links
 entity_type: paragraph

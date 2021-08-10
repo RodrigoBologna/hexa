@@ -89,7 +89,7 @@ install:
   #- config_ignore
   #- config_split
   #- csp
-  #- default_content
+  - default_content
   #- diff
   #- easy_breadcrumb
   #- editor_advanced_link
@@ -139,6 +139,8 @@ install:
   # - security_review
   # - seo_checklist
   # - w3c_validator
+# Custom
+  - hexa_default_content
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.

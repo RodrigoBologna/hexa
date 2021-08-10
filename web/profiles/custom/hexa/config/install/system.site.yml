@@ -4,8 +4,9 @@ slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
+uuid: 99a3be97-06d4-45f5-82ae-e4d776548d60
