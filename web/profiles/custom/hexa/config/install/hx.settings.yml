@@ -1,0 +1,41 @@
+schemas:
+  bootstrap: 8000
+  hx: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'https://hexa.ddev.site/themes/custom/hx/favicon.ico'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+table_responsive: '-1'
+modal_jquery_ui_bridge: 0
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
+fluid_container: 1
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header_left: ''
+  header: ''
+  header_right: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  footer_secondary: ''
+logo_style: _none
