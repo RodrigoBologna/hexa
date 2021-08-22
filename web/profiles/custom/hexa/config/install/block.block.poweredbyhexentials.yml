@@ -1,0 +1,25 @@
+uuid: 83df64aa-8fc6-42a4-9302-a146262c5ade
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:02ae9ce0-f291-4bce-b8a6-a1dfb8b9cc81'
+  module:
+    - block_content
+  theme:
+    - hx
+id: poweredbyhexentials
+theme: hx
+region: footer_secondary
+weight: 0
+provider: null
+plugin: 'block_content:02ae9ce0-f291-4bce-b8a6-a1dfb8b9cc81'
+settings:
+  id: 'block_content:02ae9ce0-f291-4bce-b8a6-a1dfb8b9cc81'
+  label: 'Powered by Hexentials'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

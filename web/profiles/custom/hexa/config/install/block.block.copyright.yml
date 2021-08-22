@@ -1,0 +1,25 @@
+uuid: 4041c940-9771-4b17-8c59-99e5fb28ddb4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7b8bd776-c39a-4269-8a46-827226a16f96'
+  module:
+    - block_content
+  theme:
+    - hx
+id: copyright
+theme: hx
+region: footer_secondary
+weight: 0
+provider: null
+plugin: 'block_content:7b8bd776-c39a-4269-8a46-827226a16f96'
+settings:
+  id: 'block_content:7b8bd776-c39a-4269-8a46-827226a16f96'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

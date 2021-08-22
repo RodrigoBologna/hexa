@@ -1,3 +1,4 @@
+uuid: e19e550b-248a-479c-b36a-3494388fc5c4
 langcode: en
 status: true
 dependencies:
@@ -12,7 +13,7 @@ entity_type: block_content
 bundle: basic
 label: Body
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
