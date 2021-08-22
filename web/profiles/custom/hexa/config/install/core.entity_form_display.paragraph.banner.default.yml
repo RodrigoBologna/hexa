@@ -22,10 +22,10 @@ content:
   field_banner_description:
     weight: 3
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
   field_banner_image:
     weight: 0

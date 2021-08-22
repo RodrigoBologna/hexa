@@ -1,4 +1,4 @@
-uuid: db30b6ad-3f2e-48d5-a83c-d22f34e844fc
+uuid: f28cd951-b4af-4fe3-a3db-0e8ff8e78c3f
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,8 @@ dependencies:
 id: paragraph.field_text_content
 field_name: field_text_content
 entity_type: paragraph
-type: text
-settings:
-  max_length: 255
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1

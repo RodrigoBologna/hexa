@@ -19,13 +19,13 @@ bundle: card
 mode: default
 content:
   field_card_description:
-    type: text_trimmed
     weight: 2
-    region: content
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: 255
     third_party_settings: {  }
+    type: text_trimmed
+    region: content
   field_card_image:
     type: responsive_image
     weight: 0
