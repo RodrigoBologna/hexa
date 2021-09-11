@@ -37,7 +37,7 @@
         dotsPosition: 'right',
         easing: 'swing',
         backToTop: true,
-        offset: 0.15, // Percentage considering the vh (viewport height) unit.
+        offset: 0, // Not needed as the header is fixed.
       });
     }
   }

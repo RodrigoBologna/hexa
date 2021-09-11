@@ -132,7 +132,6 @@
           this.scrollTo = function scrollTo($view, dir) {
 
               var plugin = this;
-
               $view = parseInt($view);
 
               if (this.offsets[$view] !== undefined && typeof $view === 'number') {
