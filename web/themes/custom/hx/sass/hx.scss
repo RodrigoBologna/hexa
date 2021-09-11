@@ -5,5 +5,10 @@
  */
 
 // Page-related.
-@import "page/fullview";
-@import "page/transitions";
+@import "components/banner";
+@import "components/banner-doubled";
+@import "layout/footer";
+@import "layout/header";
+@import "pages/dots";
+@import "pages/fullview";
+@import "pages/transitions";
