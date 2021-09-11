@@ -1,0 +1,15 @@
+uuid: cae12491-3bd2-402a-861a-ad3a3e10aa9e
+langcode: en
+status: true
+dependencies: {  }
+name: narrow_162x157
+label: 'Narrow (162x157)'
+effects:
+  f0b0815a-848e-4299-8ea4-059ed2e243b3:
+    uuid: f0b0815a-848e-4299-8ea4-059ed2e243b3
+    id: image_scale
+    weight: 1
+    data:
+      width: 162
+      height: 157
+      upscale: false
