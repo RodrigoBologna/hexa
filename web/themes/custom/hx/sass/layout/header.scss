@@ -1,0 +1,13 @@
+header {
+  //position: sticky;
+  //position: -webkit-sticky;
+  top: 0;
+  padding: 1em;
+  height: 15vh;
+  background: transparent;
+  z-index: 99;
+
+  &.col-sm-12 {
+    position: fixed;
+  }
+}
