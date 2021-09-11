@@ -114,7 +114,7 @@
               }
 
 
-              $('body').append(div);
+              $('#fullview').append(div);
 
               return div.find('a');
           };

@@ -94,7 +94,7 @@
 
 {# Main #}
 {% block main %}
-  <div id="fullview" role="main" class="main-container {{ container }} js-quickedit-main-content">
+  <div id="fullview" role="main" class="fv main-container {{ container }} js-quickedit-main-content">
     <header class="header col-sm-12">
       {# Header #}
       {% if page.header_left %}
@@ -136,7 +136,7 @@
     {# Main #}
     {%
       set content_classes = [
-        'primary',
+        'fv-primary',
         page.sidebar_first and page.sidebar_second ? 'col-sm-6',
         page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
         page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
