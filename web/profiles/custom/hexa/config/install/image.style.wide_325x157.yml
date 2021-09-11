@@ -5,8 +5,8 @@ dependencies:
   enforced:
     module:
       - responsive_image
-name: max_325x157
-label: 'Max 325x157'
+name: wide_325x157
+label: 'Wide (325x157)'
 effects:
   e6be7a32-fcd1-4bbd-8159-5291dae5c59f:
     uuid: e6be7a32-fcd1-4bbd-8159-5291dae5c59f

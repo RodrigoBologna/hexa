@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.max_1300x630
-    - image.style.max_2600x1260
-    - image.style.max_325x157
-    - image.style.max_650x315
     - image.style.medium
+    - image.style.wide_1300x630
+    - image.style.wide_1905x923
+    - image.style.wide_325x157
+    - image.style.wide_650x315
 id: wide
 label: Wide
 image_style_mappings:
@@ -18,9 +18,9 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - max_1300x630
-        - max_2600x1260
-        - max_325x157
-        - max_650x315
+        - wide_1300x630
+        - wide_1905x923
+        - wide_325x157
+        - wide_650x315
 breakpoint_group: responsive_image
 fallback_image_style: medium

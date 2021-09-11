@@ -1,0 +1,14 @@
+uuid: 57010a39-92c1-4b77-95cc-6acf0a0e18d6
+langcode: en
+status: true
+dependencies: {  }
+name: narrow_325x315
+label: 'Narrow (325x315)'
+effects:
+  e5e297ca-dc2d-4546-81b4-d765e44115a1:
+    uuid: e5e297ca-dc2d-4546-81b4-d765e44115a1
+    id: image_resize
+    weight: 1
+    data:
+      width: 325
+      height: 315

@@ -1,0 +1,17 @@
+uuid: 6f8d853f-b7d3-4787-a0e7-5ad63bfddec8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - responsive_image
+name: wide_650x315
+label: 'Wide (650x315)'
+effects:
+  a71e24dc-6180-4326-8246-cde7061facef:
+    uuid: a71e24dc-6180-4326-8246-cde7061facef
+    id: image_resize
+    weight: 2
+    data:
+      width: 650
+      height: 315

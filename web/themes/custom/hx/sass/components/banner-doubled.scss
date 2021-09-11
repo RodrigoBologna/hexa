@@ -1,7 +1,14 @@
 .paragraph--type--banner-doubled {
   .field--name-field-banner-doubled-images {
-    .img-responsive {
-      width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    .field--item {
+      flex: 50%;
+
+      .img-responsive {
+        width: 100%;
+      }
     }
   }
 }
