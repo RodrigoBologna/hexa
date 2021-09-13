@@ -1,0 +1,17 @@
+uuid: 125adfbf-8ae2-4d39-a645-269d6d52613f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - responsive_image
+name: wide_1905x891
+label: 'Wide (1905x891)'
+effects:
+  3a012ded-8c33-4d08-b13e-9183589f329b:
+    uuid: 3a012ded-8c33-4d08-b13e-9183589f329b
+    id: image_resize
+    weight: 1
+    data:
+      width: 1905
+      height: 891

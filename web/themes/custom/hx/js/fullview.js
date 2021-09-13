@@ -154,7 +154,6 @@
                       direction: dir
                   });
 
-                  console.log('Offset: ', this.offsets[$view].offset - (window.innerHeight)*this.options.offset);
                   this.$htmlBody.stop(true).animate(
                       {
                           scrollTop: this.offsets[$view].offset - (window.innerHeight)*this.options.offset

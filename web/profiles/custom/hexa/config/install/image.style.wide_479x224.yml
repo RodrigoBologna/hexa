@@ -1,0 +1,14 @@
+uuid: 0918e051-a13e-4973-a7f1-e230a0fbfef0
+langcode: en
+status: true
+dependencies: {  }
+name: wide_479x224
+label: 'Wide (479x224)'
+effects:
+  90f190aa-3fe4-4d9f-8412-269551ed56f9:
+    uuid: 90f190aa-3fe4-4d9f-8412-269551ed56f9
+    id: image_resize
+    weight: 1
+    data:
+      width: 479
+      height: 224

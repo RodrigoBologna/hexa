@@ -1,0 +1,17 @@
+.paragraph--type--banner {
+  .field--name-field-banner-image-link {
+    position: absolute;
+  }
+
+  .field--name-field-banner-image {
+    height: 100%;
+
+    picture {
+      img.img-responsive {
+        @include rwd(768) {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

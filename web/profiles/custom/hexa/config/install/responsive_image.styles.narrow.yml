@@ -3,22 +3,44 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.narrow_162x157
-    - image.style.narrow_325x315
-    - image.style.narrow_952x923
-    - image.style.thumbnail
+    - image.style.media_library
+    - image.style.narrow_479x464
+    - image.style.narrow_767x744
+    - image.style.narrow_918x891
+  theme:
+    - hx
 id: narrow
 label: Narrow
 image_style_mappings:
   -
-    breakpoint_id: responsive_image.viewport_sizing
+    breakpoint_id: hx.xl
     multiplier: 1x
-    image_mapping_type: sizes
-    image_mapping:
-      sizes: 50vw
-      sizes_image_styles:
-        - narrow_162x157
-        - narrow_325x315
-        - narrow_952x923
-breakpoint_group: responsive_image
-fallback_image_style: thumbnail
+    image_mapping_type: image_style
+    image_mapping: narrow_918x891
+  -
+    breakpoint_id: hx.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: narrow_918x891
+  -
+    breakpoint_id: hx.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_918x891
+  -
+    breakpoint_id: hx.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_918x891
+  -
+    breakpoint_id: hx.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_767x744
+  -
+    breakpoint_id: hx.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_479x464
+breakpoint_group: hx
+fallback_image_style: media_library
