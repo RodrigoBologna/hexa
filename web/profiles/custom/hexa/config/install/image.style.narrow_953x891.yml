@@ -2,13 +2,13 @@ uuid: 92540c28-b907-4350-8d64-2f4e96d5e3b3
 langcode: en
 status: true
 dependencies: {  }
-name: narrow_918x891
-label: 'Narrow (918x891)'
+name: narrow_953x891
+label: 'Narrow (953x891)'
 effects:
   c79fefc3-7743-4a1c-9ce1-cebe9f29756a:
     uuid: c79fefc3-7743-4a1c-9ce1-cebe9f29756a
     id: image_resize
     weight: 1
     data:
-      width: 918
+      width: 953
       height: 891
