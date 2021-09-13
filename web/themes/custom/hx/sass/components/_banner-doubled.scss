@@ -1,0 +1,15 @@
+.paragraph--type--banner-doubled {
+  .field--name-field-banner-doubled-images {
+    display: flex;
+    align-items: flex-start;
+
+    .field--item {
+      flex: 50%;
+
+      .img-responsive {
+        //height: 100%;
+        //width: 100%;
+      }
+    }
+  }
+}
