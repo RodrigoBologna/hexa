@@ -1,14 +1,30 @@
 .paragraph--type--banner-doubled {
   .field--name-field-banner-doubled-images {
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+      flex-direction: row;
+    }
+
     .field--item {
+      flex: 100%;
+
+      @include xl {
+        flex: 50%;
+      }
+
       .img-responsive {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: 50vh;
+        width: $full-width;
+        height: $half-height;
 
         @include xs-h {
           min-height: $screen-xs-h-min;
+        }
+
+        @include xl {
+          height: $full-height;
+          width: $half-width;
         }
       }
     }

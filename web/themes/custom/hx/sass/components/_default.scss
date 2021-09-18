@@ -1,0 +1,7 @@
+.paragraph {
+  img {
+    @include xl {
+      max-width: $screen-max;
+    }
+  }
+}

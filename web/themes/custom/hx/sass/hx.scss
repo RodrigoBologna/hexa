@@ -11,6 +11,7 @@
 
 // Init.
 @import "base/base";
+@import "base/variables";
 
 // Abstracts.
 @import "abstracts/breakpoints";
@@ -24,6 +25,7 @@
  @import "pages/dots";
 
  // Components.
+ @import "components/default";
  @import "components/banner";
  @import "components/banner-doubled";
  @import "components/card";
