@@ -2,10 +2,18 @@ $screen-xs-min: 480px;
 $screen-sm-min: 768px;
 $screen-md-min: 1024px;
 $screen-lg-min: 1200px;
+$screen-max: 1905px;
+$screen-xs-h-min: 270px;
 
 
 @mixin xs {
   @media (max-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin xs-h {
+  @media (min-height: #{$screen-xs-h-min}) {
     @content;
   }
 }
