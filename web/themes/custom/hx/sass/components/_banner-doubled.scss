@@ -1,15 +1,13 @@
 .paragraph--type--banner-doubled {
   .field--name-field-banner-doubled-images {
-
     .field--item {
-
-
       .img-responsive {
         display: flex;
         flex-direction: column;
         width: 100vw;
         height: 50vh;
-        @include xs-h{
+
+        @include xs-h {
           min-height: $screen-xs-h-min;
         }
       }
