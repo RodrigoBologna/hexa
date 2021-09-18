@@ -38,25 +38,14 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    'paragraph--orientation--' ~ content.field_card_position|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
-{% block paragraph %}
-  <section{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <div class="paragraph--box paragraph--card-image">
-        {{ content.field_card_image }}
-      </div>
-      <div class="paragraph--box paragraph--card-info">
-        {{ content.field_card_title }}
-        {{ content.field_card_description }}
-      </div>
-    {% endblock %}
-  </section>
-{% endblock paragraph %}
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="paragraph--box paragraph--card-image">
+    {{ content.field_card_image }}
+  </div>
+  <div class="paragraph--box paragraph--card-info">
+    {{ content.field_card_title }}
+    {{ content.field_card_description }}
+  </div>
+{% endblock %}
