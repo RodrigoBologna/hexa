@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.card.field_card_position
     - field.field.paragraph.card.field_card_title
     - paragraphs.paragraphs_type.card
-    - responsive_image.styles.wide
+    - responsive_image.styles.full_width
   module:
     - options
     - responsive_image
@@ -32,7 +32,7 @@ content:
     region: content
     label: hidden
     settings:
-      responsive_image_style: wide
+      responsive_image_style: full_width
       image_link: ''
     third_party_settings: {  }
   field_card_position:
