@@ -1,7 +1,6 @@
 .paragraph {
   img {
-    @include xl {
-      max-width: $screen-max;
-    }
+    height: $full-height;
+    width: 100%;
   }
 }
