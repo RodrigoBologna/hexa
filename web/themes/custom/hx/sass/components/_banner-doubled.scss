@@ -15,17 +15,6 @@
       }
 
       .img-responsive {
-        width: $full-width;
-        height: $half-height;
-
-        @include xs-h {
-          //min-height: $screen-xs-h-min;
-        }
-
-        @include xl {
-          //height: $full-height;
-          //width: $half-width;
-        }
       }
     }
   }
