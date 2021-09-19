@@ -1,0 +1,18 @@
+uuid: c903ff05-8bd0-4e0f-9611-d7d5fb342eb6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - responsive_image
+name: narrow_412x824
+label: 'Narrow (412x824)'
+effects:
+  ce9b0ef9-61a2-4610-ba20-de6db34ca1d1:
+    uuid: ce9b0ef9-61a2-4610-ba20-de6db34ca1d1
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 412
+      height: 824
+      anchor: center-center

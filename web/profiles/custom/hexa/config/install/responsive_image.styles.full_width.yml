@@ -1,0 +1,35 @@
+uuid: 6853d22f-36d2-40de-a983-62d372dbb71f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.media_library
+    - image.style.narrow_412x824
+    - image.style.wide_2158x1798
+  theme:
+    - hx
+id: full_width
+label: Full-width
+image_style_mappings:
+  -
+    breakpoint_id: hx.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_2158x1798
+  -
+    breakpoint_id: hx.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: wide_2158x1798
+  -
+    breakpoint_id: hx.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wide_2158x1798
+  -
+    breakpoint_id: hx.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: narrow_412x824
+breakpoint_group: hx
+fallback_image_style: media_library

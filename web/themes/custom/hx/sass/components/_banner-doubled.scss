@@ -19,12 +19,12 @@
         height: $half-height;
 
         @include xs-h {
-          min-height: $screen-xs-h-min;
+          //min-height: $screen-xs-h-min;
         }
 
         @include xl {
-          height: $full-height;
-          width: $half-width;
+          //height: $full-height;
+          //width: $half-width;
         }
       }
     }
