@@ -1,0 +1,25 @@
+uuid: 693f499c-992d-4408-87ca-04727b65c0d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.high_definition_widescreen
+  module:
+    - crop
+name: uhd
+label: 'UHD (16:9)'
+effects:
+  f785c6f5-c980-4937-a79f-75b5ab6bff85:
+    uuid: f785c6f5-c980-4937-a79f-75b5ab6bff85
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: high_definition_widescreen
+  27349c80-363d-4927-9212-333c44e9490f:
+    uuid: 27349c80-363d-4927-9212-333c44e9490f
+    id: image_scale
+    weight: 2
+    data:
+      width: 3840
+      height: 2160
+      upscale: false

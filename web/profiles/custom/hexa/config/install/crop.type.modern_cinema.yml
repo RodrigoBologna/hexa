@@ -1,0 +1,12 @@
+uuid: 0b492d5e-d177-4755-8e9c-7adec671e723
+langcode: en
+status: true
+dependencies: {  }
+id: modern_cinema
+label: Phone
+description: 'Aspect ratio: 9:16.'
+aspect_ratio: '9:16'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

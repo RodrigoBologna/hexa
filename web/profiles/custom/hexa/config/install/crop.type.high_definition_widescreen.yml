@@ -1,0 +1,12 @@
+uuid: 53a477e5-66f1-45d9-ad1a-1064ae6d7566
+langcode: en
+status: true
+dependencies: {  }
+id: high_definition_widescreen
+label: 'High definition widescreen'
+description: 'Aspect ratio: 16:9.'
+aspect_ratio: '16:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

@@ -1,35 +1,48 @@
-uuid: 6853d22f-36d2-40de-a983-62d372dbb71f
+uuid: bf4577fd-ba68-4f46-b71d-aba061b74245
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.media_library
-    - image.style.narrow_412x824
-    - image.style.wide_2158x1798
+    - image.style.computer_tablet
+    - image.style.instagram
+    - image.style.phone
+    - image.style.sd
+    - image.style.uhd
+    - image.style.ultrawide
   theme:
     - hx
 id: full_width
 label: Full-width
 image_style_mappings:
   -
-    breakpoint_id: hx.large
+    breakpoint_id: hx.sd
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: wide_2158x1798
+    image_mapping: sd
   -
-    breakpoint_id: hx.large
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: wide_2158x1798
-  -
-    breakpoint_id: hx.medium
+    breakpoint_id: hx.ultrawide
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: wide_2158x1798
+    image_mapping: ultrawide
   -
-    breakpoint_id: hx.small
+    breakpoint_id: hx.phone
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: narrow_412x824
+    image_mapping: phone
+  -
+    breakpoint_id: hx.instagram
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: instagram
+  -
+    breakpoint_id: hx.computer_tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: computer_tablet
+  -
+    breakpoint_id: hx.uhd
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: uhd
 breakpoint_group: hx
-fallback_image_style: media_library
+fallback_image_style: '_original image_'

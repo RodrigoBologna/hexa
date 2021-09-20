@@ -90,6 +90,7 @@ install:
   #- config_filter
   #- config_ignore
   #- config_split
+  - crop
   #- csp
   - default_content
   #- diff
@@ -107,6 +108,7 @@ install:
   #- honeypot # Spam control.
   #- imagefield_slideshow # Product gallery style.
   #- imagemagick # Use this tool instead of GD2.
+  - image_widget_crop
   - juicebox
   #- lazy
   - libraries

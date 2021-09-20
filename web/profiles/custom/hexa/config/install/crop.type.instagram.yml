@@ -1,0 +1,12 @@
+uuid: 35d0c759-0fdd-4818-9943-25050ed1cb55
+langcode: en
+status: true
+dependencies: {  }
+id: instagram
+label: Instagram
+description: 'Aspect ratio: 1:1.'
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

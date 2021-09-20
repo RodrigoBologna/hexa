@@ -1,0 +1,24 @@
+uuid: 41a0c74c-f50c-4c03-a255-4c82b648d1f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.computer_tablet
+  module:
+    - crop
+name: computer_tablet
+label: 'Computer & Tablet (16:10)'
+effects:
+  99f82872-0ab1-4e22-bf28-c6a7f55da2b4:
+    uuid: 99f82872-0ab1-4e22-bf28-c6a7f55da2b4
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: computer_tablet
+  42b7e86c-3254-4c04-8052-ec8293f4774c:
+    uuid: 42b7e86c-3254-4c04-8052-ec8293f4774c
+    id: image_resize
+    weight: 2
+    data:
+      width: 2560
+      height: 1600

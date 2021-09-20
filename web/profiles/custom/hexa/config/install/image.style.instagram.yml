@@ -1,0 +1,25 @@
+uuid: fe2d3bbf-c12a-43ef-9faf-361ac4590cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.instagram
+  module:
+    - crop
+name: instagram
+label: 'Instagram (1:1)'
+effects:
+  ffbdc848-ab3c-4ca2-90e4-26269fa7ce4f:
+    uuid: ffbdc848-ab3c-4ca2-90e4-26269fa7ce4f
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: instagram
+  9a209c8d-3afa-4cbb-ba81-56efd63d3411:
+    uuid: 9a209c8d-3afa-4cbb-ba81-56efd63d3411
+    id: image_scale
+    weight: 2
+    data:
+      width: 1080
+      height: 1080
+      upscale: false

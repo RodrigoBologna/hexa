@@ -1,19 +1,36 @@
-hx.small:
-  label: mobile
-  mediaQuery: 'all and (max-width: 599px)'
-  weight: 0
-  multipliers:
-    - 1x
-hx.medium:
-  label: iPads/tablets
-  mediaQuery: 'all and (min-width: 600px) and (orientation:portrait)'
+hx.computer_tablet:
+  label: Computer & Tablet
+  mediaQuery: 'screen and (aspect-ratio: 16/10)'
   weight: 1
   multipliers:
     - 1x
-hx.large:
-  label: laptops/PCs/TVs
-  mediaQuery: 'all and (min-width: 600px)'
-  weight: 2
+hx.uhd:
+  label: UHD
+  mediaQuery: 'screen and (aspect-ratio: 16/9)'
+  weight: 0
   multipliers:
     - 1x
-    - 2x
+hx.instagram:
+  label: Instagram
+  mediaQuery: 'screen and (aspect-ratio: 1/1)'
+  weight: 1
+  multipliers:
+    - 1x
+hx.phone:
+  label: Phone
+  mediaQuery: 'screen and (aspect-ratio: 9/16)'
+  weight: 1
+  multipliers:
+    - 1x
+hx.ultrawide:
+  label: Ultrawide
+  mediaQuery: 'screen and (aspect-ratio: 21/9)'
+  weight: 1
+  multipliers:
+    - 1x
+hx.sd:
+  label: Widescreen HDTV
+  mediaQuery: 'screen and (aspect-ratio: 4:3)'
+  weight: 1
+  multipliers:
+    - 1x

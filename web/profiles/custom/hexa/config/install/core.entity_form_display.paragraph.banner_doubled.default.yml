@@ -8,7 +8,7 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_doubled
   module:
-    - image
+    - image_widget_crop
     - link
 id: paragraph.banner_doubled.default
 targetEntityType: paragraph
@@ -18,10 +18,22 @@ content:
   field_banner_doubled_images:
     weight: 0
     settings:
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
       progress_indicator: throbber
+      crop_list:
+        - computer_tablet
+        - high_definition_widescreen
+        - instagram
+        - modern_cinema
+        - ultrawide
+        - widescreen_hdtv
+      crop_types_required: {  }
+      show_crop_area: false
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
     region: content
   field_banner_doubled_links:
     weight: 1

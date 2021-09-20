@@ -1,0 +1,12 @@
+uuid: c56ac39d-a2eb-44f6-8d53-fa0689aaf04f
+langcode: en
+status: true
+dependencies: {  }
+id: computer_tablet
+label: 'Computer & Tablet'
+description: 'Aspect ratio: 16:10.'
+aspect_ratio: '16:10'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

@@ -1,0 +1,12 @@
+uuid: b18a6de0-4944-4e35-81cb-93457cd1c9b9
+langcode: en
+status: true
+dependencies: {  }
+id: widescreen_hdtv
+label: 'Widescreen HDTV'
+description: 'Aspect ratio: 4:3.'
+aspect_ratio: '4:3'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null
