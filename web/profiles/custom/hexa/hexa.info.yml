@@ -127,6 +127,7 @@ install:
   #- single_image_formatter # Products thumbnail exhibition.
   #- single_image_formatter_responsive
   - token
+  - twig_field_value
   - video_embed_field
   #- webp
 # Profile modules

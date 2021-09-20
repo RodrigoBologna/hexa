@@ -33,6 +33,7 @@
         "drupal/redirect": "^1.6",
         "drupal/simple_sitemap": "^3.10",
         "drupal/token": "^1.9",
+        "drupal/twig_field_value": "^2.0",
         "drupal/video_embed_field": "^2.4",
         "drush/drush": "^10.5"
     },

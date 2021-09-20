@@ -4,8 +4,10 @@
     padding: 0;
     height: $full-height;
     width: 100%;
+  }
 
-    &.zoom-center {
+  &.paragraph--zoom--in {
+    img {
       object-position: 50% 50%;
       object-fit: cover;
     }
