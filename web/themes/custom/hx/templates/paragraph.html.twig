@@ -44,6 +44,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     'paragraph--orientation--' ~ content.field_orientation|clean_class,
     'paragraph--color--' ~ content.field_color|clean_class,
+    content.field_zoom|field_raw['value']|lower ? 'paragraph--zoom--in' : 'paragraph--zoom--out',
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
@@ -51,7 +52,7 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      {{ content|without('field_zoom') }}
     {% endblock %}
   </section>
 {% endblock paragraph %}

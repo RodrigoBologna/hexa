@@ -1,0 +1,23 @@
+uuid: 747ea2fe-d3b4-483d-8a87-26d36fb73fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_zoom
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_zoom
+field_name: field_zoom
+entity_type: paragraph
+bundle: banner
+label: Zoom
+description: 'Check this option to zoom in the image focusing on the center.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

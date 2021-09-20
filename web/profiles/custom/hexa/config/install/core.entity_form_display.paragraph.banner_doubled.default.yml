@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.banner_doubled.field_banner_doubled_images
     - field.field.paragraph.banner_doubled.field_banner_doubled_links
+    - field.field.paragraph.banner_doubled.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_doubled
   module:
@@ -36,12 +37,19 @@ content:
     type: image_widget_crop
     region: content
   field_banner_doubled_links:
-    weight: 1
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_zoom:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true
