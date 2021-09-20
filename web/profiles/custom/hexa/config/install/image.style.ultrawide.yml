@@ -1,0 +1,25 @@
+uuid: 51b7256c-0b55-4eb3-97c8-5a5a6326f997
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.ultrawide
+  module:
+    - crop
+name: ultrawide
+label: 'Ultrawide (21:9)'
+effects:
+  9351a23a-f185-4f88-bfbf-1f53e6f5a213:
+    uuid: 9351a23a-f185-4f88-bfbf-1f53e6f5a213
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: ultrawide
+  ef48b139-6555-4985-8c8f-846e540344ea:
+    uuid: ef48b139-6555-4985-8c8f-846e540344ea
+    id: image_scale
+    weight: 2
+    data:
+      width: 3440
+      height: 1440
+      upscale: false
