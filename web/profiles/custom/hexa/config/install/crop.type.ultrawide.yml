@@ -1,0 +1,12 @@
+uuid: 6b34a3be-23ed-4df8-a013-98c60bf45517
+langcode: en
+status: true
+dependencies: {  }
+id: ultrawide
+label: Ultrawide
+description: 'Aspect ratio: 21:9.'
+aspect_ratio: '21:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

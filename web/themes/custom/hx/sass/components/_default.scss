@@ -4,11 +4,10 @@
     padding: 0;
     height: $full-height;
     width: 100%;
-    font-family: "object-fit:cover;object-position:calc(50% + var(--asset-x-offset-mobile)) calc(50% + var(--asset-y-offset-mobile))";
-    object-position: calc(50% + var(--asset-x-offset-mobile)) calc(50% + var(--asset-y-offset-mobile));
-    //object-position: 50% 50%;
-    object-fit: cover;
-    scroll-behavior: smooth;
-    opacity: 1;
+
+    &.zoom-center {
+      object-position: 50% 50%;
+      object-fit: cover;
+    }
   }
 }

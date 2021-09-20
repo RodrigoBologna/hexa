@@ -1,0 +1,25 @@
+uuid: ba57b2d4-b1b6-4ffb-98f4-e2a0eade4af0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.widescreen_hdtv
+  module:
+    - crop
+name: sd
+label: 'SD (4:3)'
+effects:
+  f71f147c-5d64-4343-bbc0-8bd142ab3a17:
+    uuid: f71f147c-5d64-4343-bbc0-8bd142ab3a17
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: widescreen_hdtv
+  e920d50f-b194-443c-8087-0c48d0d7f180:
+    uuid: e920d50f-b194-443c-8087-0c48d0d7f180
+    id: image_scale
+    weight: 2
+    data:
+      width: 640
+      height: 480
+      upscale: false

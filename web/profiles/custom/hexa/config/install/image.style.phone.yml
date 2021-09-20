@@ -1,0 +1,25 @@
+uuid: 1d1dc737-974a-4265-b468-233a3ec97701
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.modern_cinema
+  module:
+    - crop
+name: phone
+label: 'Phone (9:16)'
+effects:
+  f8795bcf-c17f-4293-8407-3de93f64f97d:
+    uuid: f8795bcf-c17f-4293-8407-3de93f64f97d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: modern_cinema
+  e744981c-df20-4f2f-a5da-fd972093789c:
+    uuid: e744981c-df20-4f2f-a5da-fd972093789c
+    id: image_scale
+    weight: 2
+    data:
+      width: 1080
+      height: 1920
+      upscale: false
