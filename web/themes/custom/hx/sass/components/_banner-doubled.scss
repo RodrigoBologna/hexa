@@ -19,7 +19,6 @@
         height: $half-height;
 
         @include xl {
-          width: $full-width;
           height: $full-height;
         }
       }
