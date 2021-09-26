@@ -12,13 +12,28 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "bgrins/spectrum",
+            "version": "1.8.0",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/bgrins/spectrum.git",
+              "type": "git",
+              "reference": "1.8.0"
+            }
+          }
         }
     ],
     "require": {
+        "bgrins/spectrum": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/bootstrap": "^3.23",
+        "drupal/color_field": "^2.4",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/default_content": "2.0.x-dev",

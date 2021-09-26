@@ -1,0 +1,22 @@
+uuid: c0f4643a-900d-4400-ab71-d54ef24b548d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.card
+  module:
+    - color_field
+id: paragraph.card.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: card
+label: Color
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

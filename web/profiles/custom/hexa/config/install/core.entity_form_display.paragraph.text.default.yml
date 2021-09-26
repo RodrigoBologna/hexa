@@ -3,22 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_color
     - field.field.paragraph.text.field_text_content
     - paragraphs.paragraphs_type.text
   module:
+    - color_field
     - text
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
+  field_color:
+    weight: 1
+    settings:
+      show_input: '1'
+      palette: ''
+      show_buttons: '1'
+      allow_empty: '1'
+      show_palette: '0'
+      show_palette_only: '0'
+    third_party_settings: {  }
+    type: color_field_widget_spectrum
+    region: content
   field_text_content:
     weight: 0
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
 hidden:
   created: true

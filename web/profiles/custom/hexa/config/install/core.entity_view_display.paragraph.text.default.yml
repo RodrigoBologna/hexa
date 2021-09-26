@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_color
     - field.field.paragraph.text.field_text_content
     - paragraphs.paragraphs_type.text
   module:
@@ -20,4 +21,5 @@ content:
     third_party_settings: {  }
     type: text_trimmed
     region: content
-hidden: {  }
+hidden:
+  field_color: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card.field_card_image
     - field.field.paragraph.card.field_card_position
     - field.field.paragraph.card.field_card_title
+    - field.field.paragraph.card.field_color
     - field.field.paragraph.card.field_zoom
     - paragraphs.paragraphs_type.card
     - responsive_image.styles.full_width
@@ -20,7 +21,7 @@ bundle: card
 mode: default
 content:
   field_card_description:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       trim_length: 255
@@ -38,27 +39,19 @@ content:
     third_party_settings: {  }
   field_card_position:
     type: list_default
-    weight: 4
+    weight: 3
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_card_title:
     type: string
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_zoom:
-    type: boolean
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      format: true-false
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_color: true
+  field_zoom: true

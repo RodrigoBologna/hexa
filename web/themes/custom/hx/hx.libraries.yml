@@ -57,3 +57,7 @@ transitions:
     - hx/fullview
     - hx/barba
     - hx/syncscroll
+
+components:
+  js:
+    js/components.js: {}
