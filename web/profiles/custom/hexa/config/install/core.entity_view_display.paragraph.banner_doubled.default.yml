@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.banner_doubled.field_banner_doubled_images
     - field.field.paragraph.banner_doubled.field_banner_doubled_links
+    - field.field.paragraph.banner_doubled.field_color
     - field.field.paragraph.banner_doubled.field_zoom
     - paragraphs.paragraphs_type.banner_doubled
     - responsive_image.styles.full_width
@@ -26,7 +27,7 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_banner_doubled_links:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       trim_length: 128
@@ -37,14 +38,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_zoom:
-    type: boolean
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      format: true-false
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_color: true
+  field_zoom: true

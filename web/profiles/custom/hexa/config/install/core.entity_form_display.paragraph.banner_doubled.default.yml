@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.banner_doubled.field_banner_doubled_images
     - field.field.paragraph.banner_doubled.field_banner_doubled_links
+    - field.field.paragraph.banner_doubled.field_color
     - field.field.paragraph.banner_doubled.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_doubled
   module:
+    - color_field
     - image_widget_crop
     - link
 id: paragraph.banner_doubled.default
@@ -37,12 +39,24 @@ content:
     type: image_widget_crop
     region: content
   field_banner_doubled_links:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_color:
+    weight: 2
+    settings:
+      show_input: ''
+      show_palette: ''
+      palette: ''
+      show_palette_only: ''
+      show_buttons: ''
+      allow_empty: ''
+    third_party_settings: {  }
+    type: color_field_widget_spectrum
     region: content
   field_zoom:
     weight: 1

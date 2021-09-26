@@ -8,10 +8,12 @@ dependencies:
     - field.field.paragraph.banner.field_banner_image_link
     - field.field.paragraph.banner.field_banner_link
     - field.field.paragraph.banner.field_banner_title
+    - field.field.paragraph.banner.field_color
     - field.field.paragraph.banner.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner
   module:
+    - color_field
     - image_widget_crop
     - link
     - text
@@ -71,6 +73,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_color:
+    weight: 2
+    settings:
+      show_input: ''
+      show_palette: ''
+      palette: ''
+      show_palette_only: ''
+      show_buttons: ''
+      allow_empty: ''
+    third_party_settings: {  }
+    type: color_field_widget_spectrum
     region: content
   field_zoom:
     weight: 1

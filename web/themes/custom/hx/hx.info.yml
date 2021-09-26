@@ -18,6 +18,7 @@ libraries:
   - hx/barba
   - hx/syncscroll
   - hx/transitions
+  - hx/components
 
 regions:
   navigation: 'Navigation'
