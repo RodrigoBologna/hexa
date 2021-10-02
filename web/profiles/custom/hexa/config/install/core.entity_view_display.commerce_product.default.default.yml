@@ -1,12 +1,17 @@
-uuid: 6c2cdb80-fff8-4e7a-8e5c-1fe8ee0f2412
+uuid: 2f2895cb-6e49-4bef-82d3-845e091e3957
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_color
+    - field.field.commerce_product.default.field_components
+    - field.field.commerce_product.default.field_product_image
+    - responsive_image.styles.full_width
   module:
-    - commerce_product
+    - entity_reference_revisions
+    - flexslider_fields
     - text
 id: commerce_product.default.default
 targetEntityType: commerce_product
@@ -15,31 +20,43 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_product_image:
+    weight: 2
+    label: hidden
+    settings:
+      optionset: thumbnails
+      responsive_image_style: full_width
+      caption: '1'
+      image_link: ''
+    third_party_settings: {  }
+    type: flexslider_responsive
+    region: content
   title:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  variations:
-    type: commerce_add_to_cart
-    weight: 1
-    label: hidden
-    settings:
-      default_quantity: '1'
-      combine: true
-      show_quantity: false
-    third_party_settings: {  }
-    region: content
 hidden:
   created: true
+  field_color: true
   langcode: true
   stores: true
   uid: true
+  variations: true
