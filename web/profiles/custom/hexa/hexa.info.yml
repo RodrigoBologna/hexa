@@ -87,6 +87,7 @@ install:
   #- better_exposed_filters
   #- block_content_machine_name
   #- block_field
+  - commerce_product # Dependencies: commerce_price and commerce_store.
   - color_field
   #- config_filter
   #- config_ignore
@@ -134,7 +135,6 @@ install:
 # Profile modules
   - hexa_default_content
 # Theme-related modules - required for commerce profile type.
-  #- commerce
   #- commerce_cart_flyout
   #- commerce_promotion
 # Extra

@@ -1,0 +1,11 @@
+uuid: 79c4d946-ea51-40df-a50c-c797baa06b3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_publish_product
+label: 'Publish product'
+type: commerce_product
+plugin: commerce_publish_product
+configuration: {  }

@@ -1,0 +1,10 @@
+uuid: c4f4fab7-3bf7-4c2a-81e1-d63afdb99322
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

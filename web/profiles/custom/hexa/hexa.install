@@ -166,12 +166,21 @@ function hexa_run_profile_tasks(&$tasks) {
  * Prepare the brochure profile type.
  */
 function hexa_prepare_brochure_profile_type() {
-
+  hexa_commerce_initialize('brochure');
 }
 
 /**
  * Prepare the commerce profile type.
  */
 function hexa_prepare_commerce_profile_type() {
+  hexa_commerce_initialize('commerce');
+}
 
+/**
+ * Initialize the commerce - creates the defaults (store and currency).
+ */
+function hexa_commerce_initialize($profile_type) {
+  module_load_include('inc', 'hexa', 'hexa.commerce');
+
+  hexa_commerce_preparation($profile_type);
 }

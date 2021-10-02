@@ -1,3 +1,4 @@
+uuid: 60e5dad6-0e35-4688-8a07-3291ad0edf44
 langcode: en
 status: true
 dependencies: {  }
@@ -11,3 +12,4 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view commerce_product'
