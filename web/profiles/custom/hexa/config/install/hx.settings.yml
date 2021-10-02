@@ -31,8 +31,6 @@ region_wells:
 logo_style: _none
 cdn_provider: ''
 forms_required_has_error: 1
-_core:
-  default_config_hash: BO8VG8MfCgim1Xl4tfESOHq4W-mFRatsMil6PpTObEY
 features:
   comment_user_picture: true
   comment_user_verification: true
