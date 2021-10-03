@@ -29,6 +29,19 @@
         {
           "type": "package",
           "package": {
+            "name": "recurser/jquery-simple-color",
+            "version": "v1.2.3",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/recurser/jquery-simple-color.git",
+              "type": "git",
+              "reference": "v1.2.3"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
             "name": "woocommerce/flexslider",
             "version": "2.7.2",
             "type": "drupal-library",
@@ -65,6 +78,7 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/video_embed_field": "^2.4",
         "drush/drush": "^10.5",
+        "recurser/jquery-simple-color": "^1.2",
         "woocommerce/flexslider": "~2.0"
     },
     "conflict": {
