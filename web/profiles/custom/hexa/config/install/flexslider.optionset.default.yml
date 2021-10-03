@@ -1,28 +1,28 @@
-uuid: 238b7adb-9a61-49ed-b165-8e0fcef75d37
+uuid: d90bb6cb-f42e-40b6-916e-064d2376d683
 langcode: en
 status: true
 dependencies: {  }
-id: thumbnails
-label: Thumbnails
+id: default
+label: Default
 options:
-  animation: fade
+  animation: slide
   animationSpeed: 600
   direction: horizontal
-  slideshow: true
+  slideshow: false
   easing: swing
   smoothHeight: false
   reverse: false
-  slideshowSpeed: 7000
+  slideshowSpeed: 3000
   animationLoop: true
   randomize: false
   startAt: 0
-  itemWidth: 250
-  itemMargin: 10
-  minItems: 2
-  maxItems: 20
+  itemWidth: 0
+  itemMargin: 0
+  minItems: 0
+  maxItems: 0
   move: 0
   directionNav: true
-  controlNav: thumbnails
+  controlNav: '1'
   thumbCaptions: false
   thumbCaptionsBoth: false
   keyboard: true
@@ -43,5 +43,5 @@ options:
   playText: Play
   pauseOnAction: true
   pauseOnHover: false
-  controlsContainer: ''
+  controlsContainer: .flex-control-nav-container
   manualControls: ''
