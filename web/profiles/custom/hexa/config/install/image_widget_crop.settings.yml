@@ -1,10 +1,17 @@
 settings:
-  library_url: ''
-  css_url: ''
+  library_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.js'
+  css_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css'
   crop_preview_image_style: crop_thumbnail
-  crop_list: {  }
+  crop_list:
+    computer_tablet: computer_tablet
+    high_definition_widescreen: high_definition_widescreen
+    instagram: instagram
+    modern_cinema: modern_cinema
+    ultrawide: ultrawide
+    widescreen_hdtv: widescreen_hdtv
   crop_types_required: {  }
   warn_multiple_usages: false
   show_default_crop: true
   notify_apply: false
   notify_update: true
+  show_crop_area: false
