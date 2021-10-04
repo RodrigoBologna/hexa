@@ -1,0 +1,25 @@
+uuid: d1751e6e-4f05-404c-8b8b-c512b74ada1a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4a9d170d-2d69-47f7-92d6-5eeb082e1fe7'
+  module:
+    - block_content
+  theme:
+    - hx
+id: hx_copyright
+theme: hx
+region: footer_secondary
+weight: 0
+provider: null
+plugin: 'block_content:4a9d170d-2d69-47f7-92d6-5eeb082e1fe7'
+settings:
+  id: 'block_content:4a9d170d-2d69-47f7-92d6-5eeb082e1fe7'
+  label: hx_copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

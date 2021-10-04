@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 4a9d170d-2d69-47f7-92d6-5eeb082e1fe7
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: hx_copyright
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: "<h6><em>Copyright (c) 2021 by Hexentials</em></h6>\r\n"
+      format: basic_html
+      summary: ''
