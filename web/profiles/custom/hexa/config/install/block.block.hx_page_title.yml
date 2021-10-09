@@ -1,3 +1,4 @@
+uuid: 50368b6b-1973-4a71-9683-c013cb40882e
 langcode: en
 status: false
 dependencies:
@@ -6,7 +7,7 @@ dependencies:
 id: hx_page_title
 theme: hx
 region: header
-weight: -6
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

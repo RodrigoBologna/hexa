@@ -1,14 +1,41 @@
-header {
-  //position: sticky;
-  //position: -webkit-sticky;
-  top: 0;
-  padding: 1em;
-  height: 15vh;
-  background: transparent;
-  z-index: 99;
+body {
+  header {
+    top: auto;
+    padding: 0.1em;
+    height: 0.625em;
+    background: transparent;
+    z-index: 99;
 
-  // Replace the position from Bootstrap to fix it.
-  &.col-sm-12 {
-    position: fixed;
+    // Replace the position from Bootstrap to fix it.
+    &.col-sm-12 {
+      position: fixed;
+    }
+
+    .col-sm-4 {
+      padding: 0.1em;
+      height: 0.625em;
+    }
+
+    // Site logo settings.
+    .navbar-btn {
+      margin-top: 3em;
+      margin-bottom: 0;
+      margin-left: 3em;
+    }
+
+    // Site name settings.
+    .form-type-search {
+      margin-top: 5em;
+      margin-right: 5em;
+    }
+
+    // Log in menu and my account.
+    .first {
+      margin-right: 4em;
+    }
+
+    .last {
+      margin-right: 5em;
+    }
   }
 }

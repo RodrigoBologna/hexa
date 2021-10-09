@@ -28,7 +28,7 @@ region_wells:
   sidebar_second: ''
   footer: ''
   footer_secondary: ''
-logo_style: _none
+logo_style: thumbnail
 cdn_provider: ''
 forms_required_has_error: 1
 features:
@@ -39,4 +39,4 @@ features:
 logo:
   path: ''
   url: ''
-  use_default: true
+  use_default: false

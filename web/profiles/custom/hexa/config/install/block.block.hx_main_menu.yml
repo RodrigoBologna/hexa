@@ -1,3 +1,4 @@
+uuid: 4883162d-a67d-4890-9fdf-f7db1f5186b3
 langcode: en
 status: true
 dependencies:
@@ -10,7 +11,7 @@ dependencies:
 id: hx_main_menu
 theme: hx
 region: header_left
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,3 +1,4 @@
+uuid: 85b05903-a17a-4902-a8a5-6e4ef7043efc
 langcode: en
 status: true
 dependencies:
@@ -7,8 +8,8 @@ dependencies:
     - hx
 id: hx_branding
 theme: hx
-region: header
-weight: -7
+region: header_left
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
@@ -17,6 +18,6 @@ settings:
   provider: system
   label_display: '0'
   use_site_logo: true
-  use_site_name: true
+  use_site_name: false
   use_site_slogan: false
 visibility: {  }
