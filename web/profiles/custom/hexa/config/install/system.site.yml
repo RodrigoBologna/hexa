@@ -1,6 +1,4 @@
-name: 'Drush Site-Install'
-mail: admin@example.com
-slogan: 'The best products for your needs.'
+slogan: ''
 page:
   403: ''
   404: ''
