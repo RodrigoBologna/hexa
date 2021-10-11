@@ -47,6 +47,7 @@
     {% endfor %}
   {% endfor %}
 {% endif %}
+
 {%
   set classes = [
     'paragraph',
@@ -57,6 +58,7 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} {{ style|join }}>
     {% block content %}

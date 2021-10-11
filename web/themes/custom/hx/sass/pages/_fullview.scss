@@ -9,14 +9,27 @@ body {
     }
 
     .fv-primary {
-      padding: 0;
       height: 100%;
+      // Compensate the header height and add spacing on screen borders.
+      padding: 15vh 1em 1em;
 
       section {
         position: relative;
         overflow: visible;
-        height: $full-height;
+        height: $regular-height;
         width: 100%;
+      }
+    }
+  }
+
+  &.full-width {
+    #fullview {
+      .fv-primary {
+        padding: 0;
+
+        section {
+          height: $full-height;
+        }
       }
     }
   }

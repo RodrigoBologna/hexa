@@ -1,0 +1,20 @@
+uuid: 5afbbe60-e5ab-4b0d-a91e-d3396a0696e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.computer_tablet
+    - image.style.flexslider_thumbnail
+id: product
+label: Product
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - computer_tablet
+breakpoint_group: responsive_image
+fallback_image_style: flexslider_thumbnail

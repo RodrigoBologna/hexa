@@ -27,3 +27,16 @@ function hx_prepare_system_branding_block(&$variables) {
   // @TODO: use the image style to retrieve the correct URL.
   //$variables['site_logo'] = $logo_url;
 }
+
+/**
+* Implements template_preprocess_html().
+*/
+function hx_preprocess_html(&$variables) {
+  $node_type = $variables['node_type'];
+
+  if (empty($node_type)) {
+    return;
+  }
+
+  $variables['attributes']['class'][] = 'full-width';
+}

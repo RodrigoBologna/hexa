@@ -1,4 +1,4 @@
-uuid: 27383e2c-3a94-40b7-961c-55ee1ec2a980
+uuid: 481a3ee2-0c62-4ba5-bde4-d4292390c21d
 langcode: en
 status: true
 dependencies:
@@ -46,6 +46,8 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
     region: content
@@ -78,11 +80,6 @@ content:
       progress_indicator: throbber
       crop_list:
         - computer_tablet
-        - high_definition_widescreen
-        - instagram
-        - modern_cinema
-        - ultrawide
-        - widescreen_hdtv
       crop_types_required: {  }
       show_crop_area: false
     third_party_settings: {  }

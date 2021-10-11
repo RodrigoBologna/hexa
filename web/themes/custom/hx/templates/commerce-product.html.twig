@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ *
+ * Hexentials product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if product_entity.field_color  %}
+  {% set style = ['style='] %}
+  {% for properties in product_entity.field_color.value %}
+    {% for property, value in properties %}
+      {% set style = style|merge([property, ':', value, ';']) %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+{%
+  set classes = [
+    'product',
+  ]
+%}
+{% set product_attributes = create_attribute() %}
+<article{{ attributes }}>
+  <section{{ attributes.addClass(classes) }} {{ style|join }}>
+    {{ product.field_product_image }}
+    <div{{ product_attributes.addClass('product--details') }}>
+      {{- product|without('variation_attributes', 'variation_list_price', 'field_product_image') -}}
+    </div>
+  </section>
+</article>

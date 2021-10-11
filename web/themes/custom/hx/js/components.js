@@ -15,14 +15,14 @@
         return;
       }
 
-      $('.paragraph').each(function() {
-        var style = $(this).prop('style');
+      $('.paragraph, .product').each(function() {
+        var color = $(this).prop('style').color;
 
-        if (typeof style == 'undefined') {
+        if (typeof color == 'undefined') {
           return;
         }
 
-        $(this).css('background-color', $(this).css('color'));
+        $(this).css('background-color', color);
       });
     }
   }

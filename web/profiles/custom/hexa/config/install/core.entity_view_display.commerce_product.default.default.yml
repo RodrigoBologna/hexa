@@ -1,4 +1,4 @@
-uuid: f98d498d-98da-4b06-9314-82f608a9f8c7
+uuid: c50b7e22-21d1-4f7a-b403-a71948b80bab
 langcode: en
 status: true
 dependencies:
@@ -8,18 +8,27 @@ dependencies:
     - field.field.commerce_product.default.field_color
     - field.field.commerce_product.default.field_components
     - field.field.commerce_product.default.field_product_image
-    - responsive_image.styles.full_width
+    - responsive_image.styles.product
   module:
     - entity_reference_revisions
     - flexslider_fields
+    - text
 id: commerce_product.default.default
 targetEntityType: commerce_product
 bundle: default
 mode: default
 content:
+  body:
+    type: text_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 255
+    third_party_settings: {  }
   field_components:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -27,12 +36,12 @@ content:
     third_party_settings: {  }
     region: content
   field_product_image:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       optionset: default
-      responsive_image_style: full_width
-      caption: '1'
+      responsive_image_style: product
+      caption: '0'
       image_link: ''
     third_party_settings: {  }
     type: flexslider_responsive
@@ -40,13 +49,12 @@ content:
   title:
     label: hidden
     type: string
-    weight: 0
+    weight: 1
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  body: true
   created: true
   field_color: true
   langcode: true

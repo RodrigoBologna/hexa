@@ -1,4 +1,4 @@
-uuid: d90bb6cb-f42e-40b6-916e-064d2376d683
+uuid: e06ac451-60a7-4fde-830c-21929e1fc5f4
 langcode: en
 status: true
 dependencies: {  }
@@ -10,7 +10,7 @@ options:
   direction: horizontal
   slideshow: false
   easing: swing
-  smoothHeight: false
+  smoothHeight: true
   reverse: false
   slideshowSpeed: 3000
   animationLoop: true
@@ -22,15 +22,15 @@ options:
   maxItems: 0
   move: 0
   directionNav: true
-  controlNav: '1'
+  controlNav: thumbnails
   thumbCaptions: false
   thumbCaptionsBoth: false
   keyboard: true
   multipleKeyboard: false
   mousewheel: false
   touch: true
-  prevText: Previous
-  nextText: Next
+  prevText: ''
+  nextText: ''
   namespace: flex-
   selector: '.slides > li'
   sync: ''

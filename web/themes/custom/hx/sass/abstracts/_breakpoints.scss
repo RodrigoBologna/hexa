@@ -35,7 +35,13 @@
 }
 
 @mixin rwd($screen) {
-  @media (min-width: $screen+'px') {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
     @content;
   }
 }

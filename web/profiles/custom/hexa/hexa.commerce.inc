@@ -30,30 +30,35 @@ function hexa_commerce_preparation($profile_type) {
  * Create the defaults - store type, store and currency.
  */
 function _hexa_commerce_create_defaults() {
-  $address = [
-    'country_code' => 'US',
-    'address_line1' => '123 Street Drive',
-    'locality' => 'Beverly Hills',
-    'administrative_area' => 'CA',
-    'postal_code' => '90210',
+  $info = [
+    'USD' => 'US',
+    'BRL' => 'BR',
   ];
 
-  $currency = 'USD';
+  foreach ($info as $currency => $country) {
+    $address = [
+      'country_code' => $country,
+      'address_line1' => '123 Street Drive',
+      'locality' => 'Beverly Hills',
+      'administrative_area' => 'CA',
+      'postal_code' => '90210',
+    ];
 
-  $currency_importer = \Drupal::service('commerce_price.currency_importer');
-  $currency_importer->import($currency);
+    $currency_importer = \Drupal::service('commerce_price.currency_importer');
+    $currency_importer->import($currency);
 
-  $store = Store::create([
-    'type' => 'default',
-    'uid' => 1,
-    'name' => 'Default',
-    'mail' => 'admin@example.com',
-    'address' => $address,
-    'default_currency' => $currency,
-    'billing_countries' => ['US'],
-  ]);
+    $store = Store::create([
+      'type' => 'default',
+      'uid' => 1,
+      'name' => 'Default',
+      'mail' => 'oliveirafrafa@gmail.com',
+      'address' => $address,
+      'default_currency' => $currency,
+      'billing_countries' => $country,
+    ]);
 
-  $store->save();
+    $store->save();
+  }
 
   // If needed, this sets the store as the default store.
   $store_storage = \Drupal::service('entity_type.manager')->getStorage('commerce_store');
@@ -214,7 +219,7 @@ function _hexa_commerce_create_product_types(array $variations) {
   // commerce_product_add_body_field($product_type);
 
   $store = Store::load(1);
-  $images = _hexa_commerce_prepare_images([['car-baby-seat.png'], ['car-engine.png', 'car-handle.png', 'car-rear-view-mirror.png'], ['wheel-bbs.png']]);
+  $images = _hexa_commerce_prepare_images([['tesla-black.png', 'tesla-model-3.jpg', 'tesla-model-s.jpg'], ['tesla-model-x-red.jpg']]);
 
   $i = $variation_key = 0;
 
@@ -226,7 +231,7 @@ function _hexa_commerce_create_product_types(array $variations) {
     $product = Product::create([
       'uid' => $i,
       'type' => 'default',
-      'title' => 'Product' . $i,
+      'title' => 'Product ' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
       'body' => _hexa_commerce_get_dummy_text(),

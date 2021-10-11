@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-Italic.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-Italic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-Italic.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-Light.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-Light.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-Light.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-LightItalic.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-LightItalic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-LightItalic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-LightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-LightItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-MediumItalic.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-MediumItalic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-MediumItalic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-MediumItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-MediumItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-BoldItalic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-BoldItalic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-BoldItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-Black.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-Black.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-Black.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro-BlackItalic.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../fonts/GothamPro-BlackItalic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../fonts/GothamPro-BlackItalic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../../fonts/GothamPro-BlackItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../../fonts/GothamPro-BlackItalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Font size.
+$font-xs: 0.5em;
+$font-sm: 0.75em;
+$font-md: 1em;
+$font-lg: 1.5em;
+$font-xl: 2em;
+$font-xxl: 3em;
+
+@mixin font($weight, $style, $size, $higher-size) {
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+
+  @include rwd($screen-sm-min) {
+    font-size: $higher-size;
+  }
+}
+
+body {
+  font-family: 'GothamPro', sans-serif;
+}
+
+h1 {
+  @include font(bold, normal, $font-xl, $font-xxl);
+}
+
+h2, h3, h4, h5, h6 {
+  @include font(normal, normal, $font-md, $font-lg);
+}
+
+p, span {
+  @include font(300, normal, $font-md, $font-lg);
+}
+
+em {
+  @include font(300, italic, $font-md, $font-xl);
+}
+
+strong {
+  @include font(bold, normal, $font-md, $font-xl);
+}
+
+strong em {
+  @include font(bold, italic, $font-xl, $font-xxl);
+}
