@@ -1,0 +1,14 @@
+#block-hx-account-menu {
+  display: inline-block;
+
+  .navbar-nav {
+    margin: 0;
+    height: 100%;
+
+    li {
+      a {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,15 +1,24 @@
-uuid: 1228924c-26bf-4d28-868e-0855dd377ce4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.ultrawide
+  module:
+    - crop
 name: logo
-label: 'Logo (32x32)'
+label: 'Logo (149x64)'
 effects:
   7cdcd237-485a-4154-ba73-d5c12e2d2683:
     uuid: 7cdcd237-485a-4154-ba73-d5c12e2d2683
     id: image_scale
-    weight: 1
+    weight: -9
     data:
-      width: 32
-      height: 32
+      width: 149
+      height: 64
       upscale: false
+  7ea7f395-985e-45f8-b11d-d4141371a762:
+    uuid: 7ea7f395-985e-45f8-b11d-d4141371a762
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: ultrawide

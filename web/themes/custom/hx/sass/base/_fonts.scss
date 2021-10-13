@@ -135,13 +135,18 @@ $font-md: 1em;
 $font-lg: 1.5em;
 $font-xl: 2em;
 $font-xxl: 3em;
+$font-higher: 4em;
 
-@mixin font($weight, $style, $size, $higher-size) {
+@mixin font($weight, $style, $size, $medium-size, $higher-size) {
   font-weight: $weight;
   font-style: $style;
   font-size: $size;
 
-  @include rwd($screen-sm-min) {
+  @include md {
+    font-size: $medium-size;
+  }
+
+  @include rwd($screen-md-min) {
     font-size: $higher-size;
   }
 }
@@ -151,25 +156,45 @@ body {
 }
 
 h1 {
-  @include font(bold, normal, $font-xl, $font-xxl);
+  @include font(bold, normal, $font-xl, $font-xxl, $font-higher);
 }
 
 h2, h3, h4, h5, h6 {
-  @include font(normal, normal, $font-md, $font-lg);
+  @include font(normal, normal, $font-md, $font-lg, $font-xl);
 }
 
 p, span {
-  @include font(300, normal, $font-md, $font-lg);
+  @include font(300, normal, $font-md, $font-lg, $font-xl);
+
+  @include landscape {
+    font-size: $font-sm;
+  }
+
+  @include landscape-rwd($screen-landscape-xs) {
+    font-size: $font-md;
+  }
+
+  @include landscape-rwd($screen-md-min) {
+    font-size: $font-lg;
+  }
+
+  @include landscape-rwd($screen-lg-min) {
+    font-size: $font-lg;
+  }
 }
 
 em {
-  @include font(300, italic, $font-md, $font-xl);
+  @include font(300, italic, $font-md, $font-md, $font-xl);
+}
+
+a {
+  @include font(500, normal, $font-md, $font-md, $font-md);
 }
 
 strong {
-  @include font(bold, normal, $font-md, $font-xl);
+  @include font(bold, normal, $font-md, $font-md, $font-xl);
 }
 
 strong em {
-  @include font(bold, italic, $font-xl, $font-xxl);
+  @include font(bold, italic, $font-xl, $font-xl, $font-xxl);
 }

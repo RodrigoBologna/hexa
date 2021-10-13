@@ -24,13 +24,16 @@
  // Page-related.
  @import "layout/footer";
  @import "layout/header";
+ @import "layout/search";
  @import "pages/fullview";
  @import "pages/transitions";
  @import "pages/dots";
 
  // Components.
  @import "components/pattern";
- @import "components/banner";
  @import "components/banner-doubled";
+ @import "components/banner";
+ @import "components/breadcrumb";
  @import "components/card";
+ @import "components/navigation";
  @import "components/product";

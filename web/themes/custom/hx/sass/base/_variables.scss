@@ -1,8 +1,10 @@
 // Screen breakpoints.
 $screen-xs-min: 480px;
+$screen-landscape-xs: 650px;
 $screen-sm-min: 768px;
 $screen-md-min: 1024px;
 $screen-lg-min: 1200px;
+$screen-xl-min: 1600px;
 $screen-max: 1905px;
 $screen-xs-h-min: 270px;
 
@@ -10,8 +12,13 @@ $screen-xs-h-min: 270px;
 $half-width: 50vw;
 $full-width: 100vw;
 $half-height: 50vh;
-$regular-height: 85vh;
+$regular-height: 90vh;
+$landscape-md-height: 85vh;
 $full-height: 100vh;
 
 // Colors.
 $light-grey: #D8D8D8;
+
+// Image sizes (max).
+$img-landscape-sm: 250px;
+$img-landscape-lg: 500px;

@@ -11,13 +11,21 @@ body {
     .fv-primary {
       height: 100%;
       // Compensate the header height and add spacing on screen borders.
-      padding: 15vh 1em 1em;
+      padding: 10vh 2em 2em;
+
+      @include landscape {
+        padding: 15vh 2em 2em;
+      }
 
       section {
         position: relative;
         overflow: visible;
         height: $regular-height;
         width: 100%;
+
+        @include landscape {
+          height: $landscape-md-height;
+        }
       }
     }
   }

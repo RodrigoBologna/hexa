@@ -41,7 +41,16 @@
 }
 
 @mixin landscape {
-  @media (orientation: landscape) {
+  @media only screen and (min-device-width: $screen-xs-min)
+                     and (max-device-width: $screen-md-min)
+                     and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin landscape-rwd($screen) {
+  @media only screen and (min-width: #{$screen})
+                     and (orientation: landscape) {
     @content;
   }
 }

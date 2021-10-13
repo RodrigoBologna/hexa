@@ -31,6 +31,8 @@ region_wells:
 logo_style: _none
 cdn_provider: ''
 forms_required_has_error: 1
+breadcrumb_home: 1
+breadcrumb: '0'
 features:
   comment_user_picture: true
   comment_user_verification: true
