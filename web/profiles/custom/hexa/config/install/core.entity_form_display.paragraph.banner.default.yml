@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.banner.field_banner_link
     - field.field.paragraph.banner.field_banner_title
     - field.field.paragraph.banner.field_color
+    - field.field.paragraph.banner.field_position
     - field.field.paragraph.banner.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner
@@ -82,8 +83,16 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
+    region: content
+  field_position:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_zoom:
     weight: 1

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.banner_doubled.field_banner_doubled_images
     - field.field.paragraph.banner_doubled.field_banner_doubled_links
     - field.field.paragraph.banner_doubled.field_color
+    - field.field.paragraph.banner_doubled.field_position
     - field.field.paragraph.banner_doubled.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.banner_doubled
@@ -54,8 +55,16 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
+    region: content
+  field_position:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_zoom:
     weight: 1

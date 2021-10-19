@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_color
+    - field.field.paragraph.text.field_position
     - field.field.paragraph.text.field_text_content
     - paragraphs.paragraphs_type.text
   module:
@@ -22,3 +23,4 @@ content:
     region: content
 hidden:
   field_color: true
+  field_position: true

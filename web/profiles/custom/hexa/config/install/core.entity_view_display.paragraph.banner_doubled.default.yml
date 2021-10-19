@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.banner_doubled.field_banner_doubled_images
     - field.field.paragraph.banner_doubled.field_banner_doubled_links
     - field.field.paragraph.banner_doubled.field_color
+    - field.field.paragraph.banner_doubled.field_position
     - field.field.paragraph.banner_doubled.field_zoom
     - paragraphs.paragraphs_type.banner_doubled
     - responsive_image.styles.full_width
@@ -39,4 +40,5 @@ content:
     region: content
 hidden:
   field_color: true
+  field_position: true
   field_zoom: true

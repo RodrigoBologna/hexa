@@ -13,3 +13,38 @@
     }
   }
 }
+
+.paragraph—position—left {
+  .field {
+    position: absolute;
+    top:75vh;
+    left: 25vw;
+  }
+}
+
+.paragraph—position—center {
+  .field {
+    position: absolute;
+    top:75vh;
+    margin: 0 auto;
+    padding: 0 25%;
+    text-align: center;
+  }
+}
+
+.paragraph—position—right {
+  .field {
+    position: absolute;
+    top:75vh;
+    left: 75vw;
+  }
+}
+
+.field {
+  .field--name-field-banner-image,.field--name-field-banner-doubled-images   {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 0;
+  }
+}

@@ -38,6 +38,7 @@
  * @ingroup themeable
  */
 #}
+{% set position = paragraph.field_position.value %}
 {% set zoom = paragraph.field_zoom.value %}
 {% if paragraph.field_color  %}
   {% set style = ['style='] %}
@@ -54,6 +55,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     'paragraph--orientation--' ~ content.field_orientation|clean_class,
     zoom|lower ? 'paragraph--zoom--in' : 'paragraph--zoom--out',
+    position|lower ? 'paragraph—position—' ~ position,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]

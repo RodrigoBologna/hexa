@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_color
+    - field.field.paragraph.text.field_position
     - field.field.paragraph.text.field_text_content
     - paragraphs.paragraphs_type.text
   module:
@@ -22,8 +23,16 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
+    region: content
+  field_position:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_text_content:
     weight: 0

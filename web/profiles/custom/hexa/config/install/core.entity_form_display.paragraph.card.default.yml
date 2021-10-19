@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card.field_card_position
     - field.field.paragraph.card.field_card_title
     - field.field.paragraph.card.field_color
+    - field.field.paragraph.card.field_position
     - field.field.paragraph.card.field_zoom
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card
@@ -20,7 +21,7 @@ bundle: card
 mode: default
 content:
   field_card_description:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -29,7 +30,7 @@ content:
     region: content
   field_card_image:
     type: image_widget_crop
-    weight: 1
+    weight: 2
     region: content
     settings:
       show_default_crop: true
@@ -55,14 +56,14 @@ content:
     third_party_settings: {  }
   field_card_title:
     type: string_textfield
-    weight: 4
+    weight: 5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_color:
-    weight: 3
+    weight: 4
     settings:
       show_input: '1'
       palette: ''
@@ -70,11 +71,19 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
     region: content
+  field_position:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_zoom:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
