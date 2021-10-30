@@ -24,6 +24,7 @@ npm install gulp \
   gulp-livereload \
   gulp-load-plugins \
   gulp-notify \
+  gulp-rename \
   gulp-sass \
   gulp-sourcemaps \
   gulp-uglify \

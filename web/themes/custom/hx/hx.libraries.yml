@@ -1,3 +1,8 @@
+color:
+  css:
+    theme:
+      css/color.css: {}
+
 framework:
   css:
     theme:

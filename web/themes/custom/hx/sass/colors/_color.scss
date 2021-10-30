@@ -1,0 +1,34 @@
+/*!
+ * Hexentials v1.0.0 - colors
+ * Copyright 2021 - Hexentials Eireli.
+ * Licensed under MIT.
+ */
+
+// Color preparation for the color scheme.
+$header: #111111;
+$footer: #f51167;
+$shadow: #dadce0;
+$hover: #f51144;
+$hover-background: #f0e9e9;
+$background: #ffffff;
+$text: #000000;
+
+// Page structure.
+body {
+  background-color: $background;
+}
+
+p, a, span, label, summary, h1, h2, h3, h4, h5, h6 {
+  color: $text;
+}
+
+// Font-awesome icons.
+.fa-home, .fa-phone, .fa-inbox, .fa-street-view, .fa-whatsapp {
+  color: $footer;
+}
+
+header {
+  a {
+    color: $header;
+  }
+}

@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   imagemin = require('gulp-imagemin'),
-  pngquant = require('imagemin-pngquant');
+  pngquant = require('imagemin-pngquant'),
+  rename = require('gulp-rename');
 
 gulp.task('imagemin', function () {
   return gulp.src('./images/*')
@@ -19,7 +20,7 @@ gulp.task('imagemin', function () {
     .pipe(gulp.dest('./images'));
 });
 
-gulp.task('sass', function () {
+gulp.task('sass-bootstrap-hx', function () {
   return gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -27,6 +28,18 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
 });
+
+gulp.task('sass-colors', function () {
+  return gulp.src('./sass/colors/_color.scss')
+    .pipe(rename('color.css'))
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass', gulp.parallel('sass-bootstrap-hx', 'sass-colors'));
 
 function isFixed(file) {
   return file.eslint != null && file.eslint.fixed;
