@@ -40,3 +40,26 @@ function hx_preprocess_html(&$variables) {
 
   $variables['attributes']['class'][] = 'full-width';
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * Removes the transition scripts when user is logged in to ease the content
+ * management process.
+ */
+function hx_page_attachments_alter(array &$page) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    return;
+  }
+
+  // There's a user.permissions cache context that already does the work here.
+  // $page['#cache']['contexts'][] = 'user.roles';
+
+  foreach ($page['#attached']['library'] as $key => $library) {
+    if (!in_array($library, ['hx/fullview', 'hx/transitions', 'hx/syncscroll'])) {
+      continue;
+    }
+
+    unset($page['#attached']['library'][$key]);
+  }
+}
