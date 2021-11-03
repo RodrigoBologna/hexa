@@ -42,7 +42,7 @@ class ClientSettingsForm extends FormBase {
       '#maxlength' => self::ADDRESS_MAX_LENGTH,
     ];
 
-    $form['email'] = [
+    $form['mail'] = [
       '#type' => 'email',
       '#title' => $this->t('Email address'),
       '#default_value' => 'oliveirafrafa@gmail.com',
@@ -60,7 +60,7 @@ class ClientSettingsForm extends FormBase {
       // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
     ];
 
-    $form['phone_whatsapp'] = [
+    $form['whatsapp'] = [
       '#type' => 'tel',
       '#title' => $this->t('Phone number - WhatsApp'),
       '#description' => $this->t('WhatsApp phone number to display for the users.'),
@@ -112,10 +112,10 @@ class ClientSettingsForm extends FormBase {
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
 
-    $form['copyrights'] = [
+    $form['copyright'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Copyrights'),
-      '#description' => $this->t('Copyrights to display for the users.'),
+      '#title' => $this->t('Copyright'),
+      '#description' => $this->t('Copyright to display for the users.'),
       '#default_value' => t('© Copyright 2020 - Company name here'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
@@ -141,8 +141,8 @@ class ClientSettingsForm extends FormBase {
       $form_state->setErrorByName('phone_number', $message);
     }
 
-    if (strlen($form_state->getValue('phone_whatsapp')) < 8) {
-      $form_state->setErrorByName('phone_whatsapp', $message);
+    if (strlen($form_state->getValue('whatsapp')) < 8) {
+      $form_state->setErrorByName('whatsapp', $message);
     }
   }
 
@@ -163,13 +163,13 @@ class ClientSettingsForm extends FormBase {
       ->getEditable('hexa.settings')
       ->set('address', (string) $form_state->getValue('address'))
       ->set('phone', (string) $form_state->getValue('phone_number'))
-      ->set('phone_whatsapp', (string) $form_state->getValue('phone_whatsapp'))
-      ->set('email', (string) $form_state->getValue('email'))
+      ->set('whatsapp', (string) $form_state->getValue('whatsapp'))
+      ->set('mail', (string) $form_state->getValue('mail'))
       ->set('facebook', (string) $form_state->getValue('facebook'))
       ->set('twitter', (string) $form_state->getValue('twitter'))
       ->set('linkedin', (string) $form_state->getValue('linkedin'))
       ->set('instagram', (string) $form_state->getValue('instagram'))
-      ->set('copyrights', (string) $form_state->getValue('copyrights'))
+      ->set('copyright', (string) $form_state->getValue('copyright'))
       ->save();
   }
 

@@ -33,7 +33,7 @@ gulp.task('sass-colors', function () {
   return gulp.src('./sass/colors/_color.scss')
     .pipe(rename('color.css'))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));

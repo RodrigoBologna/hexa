@@ -1,5 +1,16 @@
-@mixin alignment($vertical, $horizontal) {
+@mixin alignment($vertical, $horizontal, $direction) {
   display: flex;
+  flex-direction: $direction;
+  flex-wrap: wrap;
   align-items: $vertical;
   justify-content: $horizontal;
+}
+
+@mixin page-division-column {
+  position: relative;
+  display: inline-block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }

@@ -9,6 +9,7 @@ body {
     }
 
     .fv-primary {
+      display: inline-block;
       height: 100%;
       // Compensate the header height and add spacing on screen borders.
       padding: 10vh 2em 2em;

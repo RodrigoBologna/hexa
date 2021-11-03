@@ -106,6 +106,7 @@ install:
   #- field_group
   - flexslider
   - flexslider_fields
+  - fontawesome
   # Replacing Google Analytics to integrate with Content Security Policy.
   # @see https://www.drupal.org/docs/8/modules/content-security-policy/module-compatibility.
   #- ga

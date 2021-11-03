@@ -1,0 +1,19 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 62914e9c-f8eb-469d-b2d3-5354be0c797c
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Powered by Hexentials'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

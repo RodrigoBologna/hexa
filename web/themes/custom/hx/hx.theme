@@ -32,6 +32,10 @@ function hx_prepare_system_branding_block(&$variables) {
 * Implements template_preprocess_html().
 */
 function hx_preprocess_html(&$variables) {
+  if (!isset($variables['node_type'])) {
+    return;
+  }
+
   $node_type = $variables['node_type'];
 
   if (empty($node_type)) {
@@ -39,6 +43,14 @@ function hx_preprocess_html(&$variables) {
   }
 
   $variables['attributes']['class'][] = 'full-width';
+}
+
+/**
+* Implements template_preprocess_page().
+*/
+function hx_preprocess_page(&$variables) {
+  hx_prepare_footer($variables);
+  hx_prepare_footer_secondary($variables);
 }
 
 /**
@@ -62,4 +74,164 @@ function hx_page_attachments_alter(array &$page) {
 
     unset($page['#attached']['library'][$key]);
   }
+}
+
+/**
+ * Prepare the footer region.
+ */
+function hx_prepare_footer(&$vars) {
+  $company = &$vars['page']['footer']['company'];
+  $name = \Drupal::config('system.site')->get('name');
+
+  // Retrieve the store information.
+  $entity_manager = \Drupal::entityTypeManager();
+  $store = $entity_manager->getStorage('commerce_store')->loadDefault();
+  $address = $store->getAddress();
+  $full_address = $address->getAddressLine1() . ' - ' . $address->getLocality() . '/' . $address->getAdministrativeArea() . ' - ' . $address->getPostalCode();
+
+  $details = ['name' => $name, 'address' => $full_address, 'mail' => $store->getEmail()];
+  $info = hx_get_hexa_settings(['phone', 'whatsapp', 'address']);
+  $social = hx_get_hexa_settings(['facebook', 'twitter', 'linkedin', 'instagram']);
+
+  $company['details'] = hx_prepare_company_information(array_merge($details, $info), 'details');
+  $company['social'] = hx_prepare_company_information($social, 'social');
+}
+
+/**
+ * Prepare the footer secondary region.
+ */
+function hx_prepare_footer_secondary(&$vars) {
+  $footer_secondary = &$vars['page']['footer_secondary'];
+
+  $footer_secondary['copyright'] = [
+    '#type' => 'label',
+    '#attributes' => ['class' => ['copyright']],
+    '#title' => \Drupal::config('hexa.settings')->get('copyright'),
+    '#title_display' => 'above',
+    '#weight' => '-5',
+  ];
+
+  $footer_secondary['drupal'] = [
+    '#type' => 'label',
+    '#attributes' => ['class' => ['drupal']],
+    '#title' => hx_get_icon_html('drupal'),
+    '#title_display' => 'above',
+    '#weight' => '5',
+  ];
+
+  // Set "sorted" property to FALSE to avoid miss-organizing the elements.
+  $footer_secondary['#sorted'] = FALSE;
+}
+
+/**
+ * Get profile settings (Hexentials) for a specific property.
+ */
+function hx_get_hexa_settings($properties) {
+  $values = [];
+
+  foreach ($properties as $property) {
+    $values[$property] = \Drupal::config('hexa.settings')->get($property);
+  }
+
+  return $values;
+}
+
+/**
+ * Prepare company information.
+ */
+function hx_prepare_company_information($info, $class) {
+  $items = [];
+
+  foreach ($info as $key => $markup) {
+    $items[$key] = hx_prepare_company_item($key, $markup, $class);
+  }
+
+  return [
+    '#theme' => 'item_list',
+    '#items' => $items,
+    '#theme_wrappers' => [
+      'container' => [
+        '#attributes' => [
+          'class' => ['company-item', 'company-' . $class],
+        ],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Prepare company item.
+ */
+function hx_prepare_company_item($item, $markup, $class) {
+  $function_name = 'hx_prepare_company_' . $class . '_item';
+
+  if (!function_exists($function_name)) {
+    return;
+  }
+
+  return $function_name($item, $markup);
+}
+
+/**
+ * Prepare company details item.
+ */
+function hx_prepare_company_details_item($item, $markup) {
+  $icon_html = hx_get_icon_html($item);
+  $markup = $icon_html . '<span>' . $markup . '</span>';
+
+  return [
+    '#markup' => $markup,
+    '#wrapper_attributes' => [
+      'class' => [$item],
+    ],
+  ];
+}
+
+/**
+ * Prepare company social item.
+ */
+function hx_prepare_company_social_item($item, $markup) {
+  $icon_html = hx_get_icon_html($item);
+  $markup = '<a href="' . $markup . '">' . $icon_html . '</a>';
+
+  return [
+    '#markup' => $markup,
+    '#wrapper_attributes' => [
+      'class' => [$item],
+    ],
+  ];
+}
+
+/**
+ * Check FontAwesome and retrieve the HTML accordingly.
+ */
+function hx_get_icon_html($name) {
+  hx_update_icon_mapping($name);
+
+  $fontawesome_service = \Drupal::service('fontawesome.font_awesome_manager');
+  $icon_metadata = $fontawesome_service->getIconMetadata($name);
+
+  if (!$icon_metadata) {
+    return;
+  }
+
+  // The style is set to "Brands" by default. Otherwise, "Solid".
+  $style = $fontawesome_service->determinePrefix($icon_metadata['styles']);
+  return '<i class="' . $style . ' fa-' . $icon_metadata['name'] . '"></i>';
+}
+
+/**
+ * Check the mapping to replace the name with the proper icon.
+ */
+function hx_update_icon_mapping(&$name) {
+  $mapping = [
+    'address' => 'map-marker-alt',
+    'mail' => 'envelope',
+  ];
+
+  if (!isset($mapping[$name])) {
+    return;
+  }
+
+  $name = $mapping[$name];
 }

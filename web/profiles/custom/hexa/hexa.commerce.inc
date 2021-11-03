@@ -31,30 +31,34 @@ function hexa_commerce_preparation($profile_type) {
  */
 function _hexa_commerce_create_defaults() {
   $info = [
-    'USD' => 'US',
-    'BRL' => 'BR',
-  ];
-
-  foreach ($info as $currency => $country) {
-    $address = [
-      'country_code' => $country,
+    'USD' => [
+      'country_code' => 'US',
       'address_line1' => '123 Street Drive',
       'locality' => 'Beverly Hills',
       'administrative_area' => 'CA',
       'postal_code' => '90210',
-    ];
+    ],
+    'BRL' => [
+      'country_code' => 'BR',
+      'address_line1' => 'Avenida Juscelino Kubitschek',
+      'locality' => 'São Paulo',
+      'administrative_area' => 'SP',
+      'postal_code' => '13920000',
+    ],
+  ];
 
+  foreach ($info as $currency => $item) {
     $currency_importer = \Drupal::service('commerce_price.currency_importer');
     $currency_importer->import($currency);
 
     $store = Store::create([
-      'type' => 'default',
+      'type' => 'online',
       'uid' => 1,
-      'name' => 'Default',
+      'name' => $item['country_code'],
       'mail' => 'oliveirafrafa@gmail.com',
-      'address' => $address,
+      'address' => $item,
       'default_currency' => $currency,
-      'billing_countries' => $country,
+      'billing_countries' => $item['country_code'],
     ]);
 
     $store->save();

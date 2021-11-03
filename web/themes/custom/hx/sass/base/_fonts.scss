@@ -160,11 +160,11 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  @include font(normal, normal, $font-md, $font-lg, $font-xl);
+  @include font(normal, normal, $font-md, $font-md, $font-lg);
 }
 
-p, span {
-  @include font(300, normal, $font-md, $font-lg, $font-xl);
+p, span, label {
+  @include font(300, normal, $font-md, $font-md, $font-lg);
 
   @include landscape {
     font-size: $font-sm;
@@ -174,13 +174,14 @@ p, span {
     font-size: $font-md;
   }
 
-  @include landscape-rwd($screen-md-min) {
-    font-size: $font-lg;
-  }
+  // @TODO: adjust these media queries for the regions/components.
+  //@include landscape-rwd($screen-md-min) {
+  //  font-size: $font-lg;
+  //}
 
-  @include landscape-rwd($screen-lg-min) {
-    font-size: $font-lg;
-  }
+  //@include landscape-rwd($screen-lg-min) {
+  //  font-size: $font-lg;
+  //}
 }
 
 em {

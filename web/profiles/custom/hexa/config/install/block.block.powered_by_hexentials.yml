@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:62914e9c-f8eb-469d-b2d3-5354be0c797c'
+  module:
+    - block_content
+  theme:
+    - hx
+id: powered_by_hexentials
+theme: hx
+region: footer_secondary
+weight: 0
+provider: null
+plugin: 'block_content:62914e9c-f8eb-469d-b2d3-5354be0c797c'
+settings:
+  id: 'block_content:62914e9c-f8eb-469d-b2d3-5354be0c797c'
+  label: 'Powered by Hexentials'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

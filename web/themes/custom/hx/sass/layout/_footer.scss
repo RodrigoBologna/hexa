@@ -1,3 +1,97 @@
 footer {
-  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+
+  &.footer {
+    margin: 0;
+    padding: 1em 2em;
+    border: none;
+  }
+
+  .col-sm-12 {
+    margin: 0;
+    padding: 0;
+
+    &.footer--primary {
+
+    }
+
+    &.footer--secondary {
+      padding-top: 1em;
+    }
+
+    .region {
+      @include alignment(center, center, column);
+
+      &.region-footer {
+        nav {
+          margin-bottom: 1em;
+          width: 100%;
+
+          @include rwd($screen-md-min) {
+            width: 50%;
+          }
+        }
+
+        .company-item {
+          margin: 0 0 1em;
+
+          &.company-details {
+            ul {
+              @include alignment(center, center, row);
+
+              li {
+                text-align: center;
+                flex: 0 0 100%;
+                padding: 0.25em 0;
+
+                &.name {
+                  padding: 0.5em;
+
+                  span {
+                    @include font(bold, normal, $font-md, $font-md, $font-lg);
+                  }
+                }
+              }
+            }
+          }
+
+          &.company-social {
+            ul {
+              @include alignment(center, center, row);
+            }
+          }
+        }
+      }
+
+      &.region-footer-secondary {
+        @include alignment(center, center, row);
+
+        .copyright, > div {
+          margin: 0;
+          padding: 0 1em;
+        }
+
+        label {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .company-item {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+      }
+
+      svg {
+        margin-right: 0.5em;
+        font-size: 1.25em;
+      }
+    }
+  }
 }

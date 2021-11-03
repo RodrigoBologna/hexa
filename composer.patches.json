@@ -1,4 +1,7 @@
 {
   "patches": {
+    "drupal/core": {
+      "New added color in color.inc after theme is enabled not reflecting on theme settings page": "https://www.drupal.org/files/issues/2019-07-09/3066679-2.patch"
+    }
   }
 }

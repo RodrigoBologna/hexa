@@ -7,8 +7,12 @@
 
     li {
       a {
-        padding: 0;
+        padding: 1em;
       }
     }
   }
+}
+
+.menu {
+  @include alignment(center, center, row);
 }

@@ -5,19 +5,40 @@
  * Lists available colors and color schemes.
  */
 
-$header = '#111111';
-$footer = '#f51167';
-$shadow = '#dadce0';
-$hover = '#f51144';
-$hover_background = '#f0e9e9';
-$background = '#ffffff';
-$text = '#000000';
+/**
+ * These colors are imported from Bootstrap (similar variables).
+ *
+ * @see _color.scss
+ */
+$header = '#e5e5e5';
+$footer = '#f5f5f5';
+$nav_item = '#777777';
+$nav_bg = '#f8f8f8';
+$active = '#555555';
+$hover = '#222222';
+$hover_bg = '#dddddd';
+$dots = '#c7254e';
+$dots_active = '#f9f2f4';
+$shadow = '#eeeeee';
+$bg = '#ffffff';
+$text = '#333333';
+
+$logo_url = theme_get_setting('logo.url', 'hx');
+
+//if (empty($logo_url)) {
+  $logo_url = 'logo.svg';
+//}
 
 $info = [
   // Available colors and color labels used in theme.
   'fields' => [
     'header' => t('Header'),
     'footer' => t('Footer'),
+    'nav' => t('Navigation'),
+    'nav_bg' => t('Navigation background'),
+    'active' => t('Active'),
+    'dots' => t('Dots'),
+    'dots_active' => t('Dots active'),
     'shadow' => t('Shadow'),
     'hover' => t('Hover'),
     'hover_background' => t('Hover background'),
@@ -30,59 +51,28 @@ $info = [
       'colors' => [
         'header' => $header,
         'footer' => $footer,
+        'nav' => $nav_item,
+        'nav_bg' => $nav_bg,
+        'active' => $active,
+        'dots' => $dots,
+        'dots_active' => $dots_active,
         'shadow' => $shadow,
         'hover' => $hover,
-        'hover_background' => $hover_background,
-        'background' => $background,
+        'hover_background' => $hover_bg,
+        'background' => $bg,
         'text' => $text,
       ],
     ],
-    'red' => [
-      'title' => t('Dark red'),
-      'colors' => [
-        'header' => '#a20f0f',
-        'footer' => '#e54237',
-        'shadow' => $shadow,
-        'hover' => '#e54237',
-        'hover_background' => $background,
-        'background' => $text,
-        'text' => $background,
-      ]
-    ],
-    'green' => [
-      'title' => t('Dark green'),
-      'colors' => [
-        'header' => '#296315',
-        'footer' => '#40c312',
-        'shadow' => $shadow,
-        'hover' => '#40c312',
-        'hover_background' => $background,
-        'background' => $text,
-        'text' => $background,
-      ]
-    ],
-    'blue' => [
-      'title' => t('Dark blue'),
-      'colors' => [
-        'header' => '#0f0fa2',
-        'footer' => '#13c7bb',
-        'shadow' => $shadow,
-        'hover' => '#13c7bb',
-        'hover_background' => $background,
-        'background' => $text,
-        'text' => $background,
-      ]
-    ]
   ],
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => [
-    'css/colors.css',
+    'css/color.css',
   ],
 
   // Files to copy.
   'copy' => [
-    theme_get_setting('logo.url', 'hx'),
+    $logo_url,
   ],
 
   '#attached' => [

@@ -174,14 +174,23 @@
         </aside>
       {% endblock %}
     {% endif %}
+
+    {# Footer #}
+    <footer class="footer section col-sm-12" role="contentinfo">
+      {% if page.footer %}
+        {% block footer %}
+          <div class="footer--primary col-sm-12" role="footer">
+            {{ page.footer }}
+          </div>
+        {% endblock %}
+      {% endif %}
+      {% if page.footer_secondary %}
+        {% block footer_secondary %}
+          <div class="footer--secondary col-sm-12" role="footer">
+            {{ page.footer_secondary }}
+          </div>
+        {% endblock %}
+      {% endif %}
+    </footer>
   </div>
 {% endblock %}
-
-{% if page.footer %}
-  {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
-      {{ page.footer_secondary }}
-    </footer>
-  {% endblock %}
-{% endif %}

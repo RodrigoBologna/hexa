@@ -4,31 +4,82 @@
  * Licensed under MIT.
  */
 
-// Color preparation for the color scheme.
-$header: #111111;
-$footer: #f51167;
-$shadow: #dadce0;
-$hover: #f51144;
-$hover-background: #f0e9e9;
-$background: #ffffff;
-$text: #000000;
+@import "../../bootstrap/assets/stylesheets/bootstrap/variables";
+@import "../base/variables";
+@import "../abstracts/breakpoints";
+
+// Color preparation for the color scheme using Bootstrap variables.
+$header: $modal-header-border-color;
+$footer: $panel-footer-bg;
+$nav-item: $navbar-default-link-color;
+$nav-bg: $navbar-default-bg;
+$active: $navbar-default-link-active-color;
+$hover: $gray-lighter;
+$hover-bg: $navbar-default-toggle-hover-bg;
+$dots: $code-color;
+$dots-active: $code-bg;
+$shadow: $gray-shadow;
+$bg: $body-bg;
+$text: $text-color;
+
+@mixin nav-link-color($color, $active) {
+  .nav {
+    >li {
+      >a {
+        color: $color;
+
+        &:hover, &:focus {
+          color: $active;
+        }
+      }
+    }
+  }
+}
 
 // Page structure.
 body {
-  background-color: $background;
+  background-color: $bg;
 }
 
-p, a, span, label, summary, h1, h2, h3, h4, h5, h6 {
+p, span, label, summary, h1, h2, h3, h4, h5, h6 {
   color: $text;
 }
 
-// Font-awesome icons.
-.fa-home, .fa-phone, .fa-inbox, .fa-street-view, .fa-whatsapp {
-  color: $footer;
+header {
+  @include nav-link-color($nav-item, $active);
 }
 
-header {
-  a {
-    color: $header;
+footer {
+  background-color: $footer;
+  @include nav-link-color($nav-item, $active);
+
+  .region-footer {
+    border-bottom: 1px solid $shadow;
+  }
+
+  .region-footer-secondary {
+    .copyright {
+      @include rwd($screen-md-min) {
+        border-right: 1px solid $shadow;
+      }
+    }
+  }
+}
+
+#fv-dots {
+  ul {
+    li {
+      a {
+        &:before {
+          background: $dots;
+        }
+
+        &.active {
+          &:before {
+            background-color: $dots-active;
+          }
+        }
+      }
+    }
   }
 }

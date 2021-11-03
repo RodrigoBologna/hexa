@@ -32,7 +32,7 @@
 
       $('#fullview').fullView({
         navbar: '.header',
-        element: 'section',
+        element: 'section, .section',
         dots: true,
         dotsPosition: 'right',
         easing: 'swing',
