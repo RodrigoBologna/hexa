@@ -4,8 +4,8 @@ namespace Drupal\hexa\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 use Drupal\user\UserInterface;
+use PhpParser\Node\Expr\Cast\String_;
 
 /**
  * Implements an example form.
@@ -32,6 +32,14 @@ class ClientSettingsForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form_state->disableCache();
     $form['#title'] = $this->t('Configure client preferences');
+
+    $form['name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Name'),
+      '#description' => $this->t('Name of your company to display for users.'),
+      '#default_value' => t('Hexentials'),
+      '#required' => TRUE,
+    ];
 
     $form['slogan'] = [
       '#type' => 'textfield',
@@ -150,6 +158,20 @@ class ClientSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $name = (string) $form_state->getValue('name');
+    $mail = (String) $form_state->getValue('mail');
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    $user = \Drupal\user\Entity\User::create();
+    $user->setPassword((strtolower($name)));
+    $user->enforceIsNew();
+    $user->setEmail($mail);
+    $user->setUsername((strtolower($name)));
+    $user->set("langcode", $language);
+    $user->addRole('content_manager');
+    $user->activate();
+    $user->save();
+
     $this->updateConfiguration($form_state);
   }
 
@@ -161,6 +183,7 @@ class ClientSettingsForm extends FormBase {
 
     \Drupal::configFactory()
       ->getEditable('hexa.settings')
+      ->set('name', (string) $form_state->getValue('name'))
       ->set('address', (string) $form_state->getValue('address'))
       ->set('phone', (string) $form_state->getValue('phone_number'))
       ->set('whatsapp', (string) $form_state->getValue('whatsapp'))
@@ -172,5 +195,4 @@ class ClientSettingsForm extends FormBase {
       ->set('copyright', (string) $form_state->getValue('copyright'))
       ->save();
   }
-
 }
