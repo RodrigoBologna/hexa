@@ -1,0 +1,90 @@
+.container-fluid {
+  &#navbar {
+    // Full-width display needs the position fixed to display accordingly.
+    //position: sticky;
+    //position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    @include alignment(center, space-between, column);
+    height: auto;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    border: none;
+    z-index: 99;
+    @include padding-default();
+
+    @include rwd($screen-md-min) {
+      flex-direction: row;
+    }
+
+    @include landscape {
+      height: 15vh;
+    }
+
+    .navbar-header {
+      @include alignment(center, center, row, nowrap);
+      @include no-spacing();
+      float: none;
+      width: 100%;
+
+      @include rwd($screen-md-min) {
+        flex: 0 0 20%;
+      }
+
+      .region-navigation {
+        width: 100%;
+
+        .logo {
+          @include no-spacing();
+        }
+      }
+
+      .navbar-toggle {
+        @include no-spacing();
+        border: none;
+        background-color: transparent;
+
+        .icon-bar {
+          height: 2px;
+          width: 1.75em;
+        }
+      }
+    }
+
+    > .navbar-collapse {
+      @include no-spacing();
+
+      @include rwd($screen-md-min) {
+        flex: 0 0 20%;
+      }
+
+      &.center {
+        @include rwd($screen-md-min) {
+          flex: 0 0 60%;
+        }
+      }
+    }
+  }
+
+  .menu {
+    @include alignment(center, center, row);
+    width: 100%;
+
+    &.menu--account {
+      justify-content: right;
+    }
+
+    &.navbar-nav {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+
+      li {
+        a {
+          padding: 1em;
+        }
+      }
+    }
+  }
+}

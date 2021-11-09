@@ -6,7 +6,7 @@ dependencies:
 id: hx_page_title
 theme: hx
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

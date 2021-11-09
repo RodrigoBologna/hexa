@@ -1,8 +1,7 @@
 // Temporarily disabled as it won't fit the current layout.
 .breadcrumb {
   height: 5vh;
-  padding: 0;
-  margin: 0;
+  @include no-spacing();
   background-color: transparent;
   border-radius: unset;
 }

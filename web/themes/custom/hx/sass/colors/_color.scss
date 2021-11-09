@@ -12,24 +12,26 @@
 $header: $modal-header-border-color;
 $footer: $panel-footer-bg;
 $nav-item: $navbar-default-link-color;
+$nav-item-footer: $iron;
 $nav-bg: $navbar-default-bg;
 $active: $navbar-default-link-active-color;
-$hover: $gray-lighter;
 $hover-bg: $navbar-default-toggle-hover-bg;
 $dots: $code-color;
 $dots-active: $code-bg;
 $shadow: $gray-shadow;
 $bg: $body-bg;
 $text: $text-color;
+$text_hover: $navbar-default-link-hover-color;
 
 @mixin nav-link-color($color, $active) {
   .nav {
-    >li {
-      >a {
+    > li {
+      > a {
         color: $color;
 
         &:hover, &:focus {
-          color: $active;
+          color: $text_hover;
+          background-color: $active;
         }
       }
     }
@@ -45,13 +47,35 @@ p, span, label, summary, h1, h2, h3, h4, h5, h6 {
   color: $text;
 }
 
-header {
+
+#navbar {
+  .navbar-nav {
+    > li {
+      > a:hover {
+        color: $text_hover;
+        background-color: $active;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    .icon-bar {
+      background-color: $nav-item;
+    }
+  }
+
+  .navbar-collapse {
+    border-color: $shadow;
+  }
+}
+
+header, #navbar {
   @include nav-link-color($nav-item, $active);
 }
 
 footer {
   background-color: $footer;
-  @include nav-link-color($nav-item, $active);
+  @include nav-link-color($nav-item-footer, $active);
 
   .region-footer {
     border-bottom: 1px solid $shadow;

@@ -123,7 +123,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Copyright'),
       '#description' => $this->t('Copyright to display for the users.'),
-      '#default_value' => t('© Copyright 2020 - Company name here'),
+      '#default_value' => t('© Copyright 2021 - Company name here'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];

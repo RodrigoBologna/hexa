@@ -9,7 +9,7 @@ dependencies:
     - hx
 id: hx_account_menu
 theme: hx
-region: header_right
+region: navigation_collapsible
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'

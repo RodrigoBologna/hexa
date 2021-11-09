@@ -1,16 +1,24 @@
-@mixin alignment($vertical, $horizontal, $direction) {
+@mixin alignment($vertical, $horizontal, $direction, $wrap: wrap) {
   display: flex;
   flex-direction: $direction;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
   align-items: $vertical;
   justify-content: $horizontal;
+}
+
+@mixin no-spacing() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin padding-default() {
+  padding: 1em 2em;
 }
 
 @mixin page-division-column {
   position: relative;
   display: inline-block;
   float: none;
-  margin: 0;
-  padding: 0;
+  @include no-spacing();
   width: 100%;
 }
