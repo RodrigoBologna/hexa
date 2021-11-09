@@ -22,12 +22,13 @@
 @import "base/fonts";
 
  // Page-related.
- @import "layout/footer";
+ @import "layout/navigation";
  @import "layout/header";
  @import "layout/search";
  @import "pages/fullview";
- @import "pages/transitions";
+ @import "layout/footer";
  @import "pages/dots";
+ @import "pages/transitions";
 
  // Components.
  @import "components/pattern";
@@ -36,5 +37,5 @@
  @import "components/breadcrumb";
  @import "components/card";
  @import "components/icon";
- @import "components/navigation";
+ @import "components/menu";
  @import "components/product";

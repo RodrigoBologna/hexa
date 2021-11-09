@@ -1,7 +1,6 @@
 .paragraph, .product {
   img {
-    margin: 0;
-    padding: 0;
+    @include no-spacing();
     height: $full-height;
     width: 100%;
   }

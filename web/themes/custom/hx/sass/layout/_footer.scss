@@ -6,13 +6,12 @@ footer {
 
   &.footer {
     margin: 0;
-    padding: 1em 2em;
     border: none;
+    @include padding-default();
   }
 
   .col-sm-12 {
-    margin: 0;
-    padding: 0;
+    @include no-spacing();
 
     &.footer--primary {
 
@@ -75,15 +74,13 @@ footer {
         }
 
         label {
-          margin: 0;
-          padding: 0;
+          @include no-spacing();
         }
       }
 
       .company-item {
         ul {
-          margin: 0;
-          padding: 0;
+          @include no-spacing();
           list-style: none;
         }
       }

@@ -7,7 +7,7 @@ dependencies:
     - hx
 id: hx_search
 theme: hx
-region: header_right
+region: navigation
 weight: -6
 provider: null
 plugin: search_form_block

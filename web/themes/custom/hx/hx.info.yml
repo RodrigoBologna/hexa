@@ -23,10 +23,9 @@ libraries:
 
 regions:
   navigation: 'Navigation'
+  navigation_center_collapsible: 'Navigation - Center (Collapsible)'
   navigation_collapsible: 'Navigation (Collapsible)'
-  header_left: 'Header - Left'
   header: 'Header'
-  header_right: 'Header - Right'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
