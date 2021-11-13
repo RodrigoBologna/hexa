@@ -35,9 +35,10 @@
         element: 'section, .section',
         dots: true,
         dotsPosition: 'right',
-        easing: 'swing',
+        easing: 'ease-out',
         backToTop: true,
         offset: 0, // Not needed as the header is fixed.
+        speed: 300,
       });
     }
   }
