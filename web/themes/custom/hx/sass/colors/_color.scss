@@ -9,17 +9,17 @@
 @import "../abstracts/breakpoints";
 
 // Color preparation for the color scheme using Bootstrap variables.
+$bg: $body-bg;
 $header: $modal-header-border-color;
 $footer: $panel-footer-bg;
-$nav-item: $navbar-default-link-color;
-$nav-item-footer: $iron;
+$link: $navbar-default-link-color;
+$link-footer: $iron;
 $nav-bg: $navbar-default-bg;
 $active: $navbar-default-link-active-color;
 $hover-bg: $navbar-default-toggle-hover-bg;
 $dots: $code-color;
 $dots-active: $code-bg;
 $shadow: $gray-shadow;
-$bg: $body-bg;
 $text: $text-color;
 $text_hover: $navbar-default-link-hover-color;
 
@@ -60,7 +60,7 @@ p, span, label, summary, h1, h2, h3, h4, h5, h6 {
 
   .navbar-toggle {
     .icon-bar {
-      background-color: $nav-item;
+      background-color: $link;
     }
   }
 
@@ -70,15 +70,23 @@ p, span, label, summary, h1, h2, h3, h4, h5, h6 {
 }
 
 header, #navbar {
-  @include nav-link-color($nav-item, $active);
+  @include nav-link-color($link, $active);
 }
 
 footer {
   background-color: $footer;
-  @include nav-link-color($nav-item-footer, $active);
+  @include nav-link-color($link-footer, $active);
 
   .region-footer {
-    border-bottom: 1px solid $shadow;
+    &:after {
+      background-color: $shadow;
+    }
+
+    nav {
+      &:after {
+        background-color: $shadow;
+      }
+    }
   }
 
   .region-footer-secondary {
@@ -106,4 +114,9 @@ footer {
       }
     }
   }
+}
+
+// Icons.
+.fa-map-marker-alt, .fa-envelope, .fa-phone {
+  color: $active;
 }

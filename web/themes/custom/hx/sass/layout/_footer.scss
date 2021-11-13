@@ -25,13 +25,12 @@ footer {
       @include alignment(center, center, column);
 
       &.region-footer {
+        @include border-bottom(50%, 50%);
+
         nav {
           margin-bottom: 1em;
           width: 100%;
-
-          @include rwd($screen-md-min) {
-            width: 50%;
-          }
+          @include border-bottom(5%, 50%);
         }
 
         .company-item {
