@@ -6,6 +6,18 @@
   justify-content: $horizontal;
 }
 
+@mixin border-bottom($size, $alignment) {
+  &:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    height: 1px;
+    width: $size;
+  }
+}
+
 @mixin no-spacing() {
   margin: 0;
   padding: 0;
