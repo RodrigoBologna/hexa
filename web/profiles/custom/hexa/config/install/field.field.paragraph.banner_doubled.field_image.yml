@@ -2,18 +2,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_banner_doubled_images
+    - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.banner_doubled
   module:
+    - content_translation
     - image
-id: paragraph.banner_doubled.field_banner_doubled_images
-field_name: field_banner_doubled_images
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: paragraph.banner_doubled.field_image
+field_name: field_image
 entity_type: paragraph
 bundle: banner_doubled
-label: Images
+label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

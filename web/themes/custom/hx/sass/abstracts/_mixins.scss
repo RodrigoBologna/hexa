@@ -6,6 +6,13 @@
   justify-content: $horizontal;
 }
 
+@mixin alignment-info($property, $value, $transform) {
+  position: absolute;
+  top: 50%;
+  #{$property}: #{$value};
+  transform: $transform;
+}
+
 @mixin border-bottom($size, $alignment) {
   &:after {
     bottom: 0;

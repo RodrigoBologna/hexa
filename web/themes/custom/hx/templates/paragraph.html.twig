@@ -32,6 +32,8 @@
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
+ * - link: Raw URL link for the image.
+ * - position: Alignment for the extra info.
  *
  * @see template_preprocess_paragraph()
  *
@@ -52,7 +54,7 @@
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
-    'paragraph--orientation--' ~ content.field_orientation|clean_class,
+    'paragraph--position--' ~ position|clean_class,
     zoom|lower ? 'paragraph--zoom--in' : 'paragraph--zoom--out',
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
@@ -62,7 +64,16 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }} {{ style|join }}>
     {% block content %}
-      {{ content }}
+      <div class="paragraph--box paragraph--image">
+        {% if image_link %}
+          <a href="{{ image_link }}">{{ content.field_image }}</a>
+        {% else %}
+          {{ content.field_image }}
+        {% endif %}
+      </div>
+      <div class="paragraph--box paragraph--info">
+        {{ content|without('field_image', 'field_image_link') }}
+      </div>
     {% endblock %}
   </section>
 {% endblock paragraph %}

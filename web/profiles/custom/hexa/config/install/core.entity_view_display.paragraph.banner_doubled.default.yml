@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.banner_doubled.field_banner_doubled_images
-    - field.field.paragraph.banner_doubled.field_banner_doubled_links
     - field.field.paragraph.banner_doubled.field_color
+    - field.field.paragraph.banner_doubled.field_image
+    - field.field.paragraph.banner_doubled.field_image_link
     - field.field.paragraph.banner_doubled.field_zoom
     - paragraphs.paragraphs_type.banner_doubled
     - responsive_image.styles.full_width
@@ -16,22 +16,22 @@ targetEntityType: paragraph
 bundle: banner_doubled
 mode: default
 content:
-  field_banner_doubled_images:
-    type: responsive_image
-    weight: 0
-    region: content
+  field_image:
+    weight: 1
     label: hidden
     settings:
       responsive_image_style: full_width
       image_link: ''
     third_party_settings: {  }
-  field_banner_doubled_links:
-    weight: 1
+    type: responsive_image
+    region: content
+  field_image_link:
+    weight: 0
     label: hidden
     settings:
       trim_length: 128
-      url_only: false
-      url_plain: false
+      url_only: true
+      url_plain: true
       rel: '0'
       target: '0'
     third_party_settings: {  }

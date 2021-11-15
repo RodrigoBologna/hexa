@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_banner_link
+    - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.banner
   module:
     - link
-id: paragraph.banner.field_banner_link
-field_name: field_banner_link
+id: paragraph.banner.field_link
+field_name: field_link
 entity_type: paragraph
 bundle: banner
 label: Link
@@ -18,5 +18,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 2
+  title: 1
 field_type: link
