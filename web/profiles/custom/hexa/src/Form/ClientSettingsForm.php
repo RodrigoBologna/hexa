@@ -5,7 +5,6 @@ namespace Drupal\hexa\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\user\UserInterface;
-use PhpParser\Node\Expr\Cast\String_;
 
 /**
  * Implements an example form.
@@ -37,7 +36,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Name'),
       '#description' => $this->t('Name of your company to display for users.'),
-      '#default_value' => t('Hexentials'),
+      '#default_value' => $this->t('Hexentials'),
       '#required' => TRUE,
     ];
 
@@ -45,7 +44,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Slogan'),
       '#description' => $this->t('Slogan to display for the users.'),
-      '#default_value' => t('The best products for your needs.'),
+      '#default_value' => $this->t('The best products for your needs.'),
       '#required' => FALSE,
       '#maxlength' => self::ADDRESS_MAX_LENGTH,
     ];
@@ -158,8 +157,13 @@ class ClientSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $this->createUser($form_state);
+    $this->updateConfiguration($form_state);
+  }
+
+  public function createUser($form_state) {
     $name = (string) $form_state->getValue('name');
-    $mail = (String) $form_state->getValue('mail');
+    $mail = (string) $form_state->getValue('mail');
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
     $user = \Drupal\user\Entity\User::create();
@@ -167,12 +171,11 @@ class ClientSettingsForm extends FormBase {
     $user->enforceIsNew();
     $user->setEmail($mail);
     $user->setUsername((strtolower($name)));
-    $user->set("langcode", $language);
+
+    $user->set('langcode', $language);
     $user->addRole('content_manager');
     $user->activate();
     $user->save();
-
-    $this->updateConfiguration($form_state);
   }
 
   /**
