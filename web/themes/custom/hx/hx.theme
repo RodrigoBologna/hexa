@@ -250,6 +250,7 @@ function hx_update_icon_mapping(&$name) {
  */
 function hx_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
+
   $variables['image_link'] = _hx_prepare_component_image_link($paragraph);
   $variables['position'] = _hx_prepare_component_position($paragraph);
 }
