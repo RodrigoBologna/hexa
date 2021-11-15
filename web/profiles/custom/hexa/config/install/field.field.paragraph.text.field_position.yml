@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_content
+    - field.storage.paragraph.field_position
     - paragraphs.paragraphs_type.text
   module:
-    - text
-id: paragraph.text.field_text_content
-field_name: field_text_content
+    - options
+id: paragraph.text.field_position
+field_name: field_position
 entity_type: paragraph
 bundle: text
-label: Content
+label: Position
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: list_string

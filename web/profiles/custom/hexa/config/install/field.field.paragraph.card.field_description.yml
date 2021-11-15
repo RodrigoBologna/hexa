@@ -2,19 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_card_position
+    - field.storage.paragraph.field_description
     - paragraphs.paragraphs_type.card
   module:
-    - options
-id: paragraph.card.field_card_position
-field_name: field_card_position
+    - text
+id: paragraph.card.field_description
+field_name: field_description
 entity_type: paragraph
 bundle: card
-label: Position
+label: Description
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: text_long

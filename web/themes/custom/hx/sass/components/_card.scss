@@ -1,28 +1,3 @@
 .paragraph--type--card {
-  display: flex;
-  flex-wrap: wrap;
 
-  &.paragraph--orientation--left {
-
-  }
-
-  &.paragraph--orientation--right {
-
-  }
-
-  .paragraph--box {
-    margin: auto;
-    flex: 0 0 50%;
-
-    &.paragraph--card-image {
-      .field--name-field-card-image {
-        .img-responsive {
-          float: right;
-        }
-      }
-    }
-
-    &.paragraph--card-info {
-    }
-  }
 }

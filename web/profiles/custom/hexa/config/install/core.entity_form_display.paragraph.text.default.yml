@@ -3,10 +3,14 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text.field_color
-    - field.field.paragraph.text.field_text_content
+    - field.field.paragraph.text.field_content
+    - field.field.paragraph.text.field_link
+    - field.field.paragraph.text.field_position
+    - field.field.paragraph.text.field_title
     - paragraphs.paragraphs_type.text
   module:
     - color_field
+    - link
     - text
 id: paragraph.text.default
 targetEntityType: paragraph
@@ -14,7 +18,7 @@ bundle: text
 mode: default
 content:
   field_color:
-    weight: 1
+    weight: 0
     settings:
       show_input: '1'
       palette: ''
@@ -22,16 +26,40 @@ content:
       allow_empty: '1'
       show_palette: '0'
       show_palette_only: '0'
+      cancel_text: Cancel
+      choose_text: Choose
     third_party_settings: {  }
     type: color_field_widget_spectrum
     region: content
-  field_text_content:
-    weight: 0
+  field_content:
+    weight: 3
     settings:
-      placeholder: ''
       rows: 5
+      placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_position:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_banner_doubled_links
+    - field.storage.paragraph.field_image_link
     - paragraphs.paragraphs_type.banner_doubled
   module:
     - link
-id: paragraph.banner_doubled.field_banner_doubled_links
-field_name: field_banner_doubled_links
+id: paragraph.banner_doubled.field_image_link
+field_name: field_image_link
 entity_type: paragraph
 bundle: banner_doubled
-label: Links
+label: 'Image link'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 2
+  title: 1
 field_type: link

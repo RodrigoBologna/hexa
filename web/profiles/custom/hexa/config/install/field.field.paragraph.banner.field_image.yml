@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_card_image
-    - paragraphs.paragraphs_type.card
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.banner
   module:
     - image
-id: paragraph.card.field_card_image
-field_name: field_card_image
+id: paragraph.banner.field_image
+field_name: field_image
 entity_type: paragraph
-bundle: card
+bundle: banner
 label: Image
 description: ''
 required: false
