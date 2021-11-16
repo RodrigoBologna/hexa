@@ -13,26 +13,53 @@
   }
 
   .paragraph--info {
-    width: 33%;
+    position: absolute;
+    bottom: 0;
     text-align: center;
-    padding: 0 2em;
-  }
+    padding: 1em 2em;
 
-  &.paragraph--position--left {
-    .paragraph--info {
-      @include alignment-info(left, 0, translate(0%, -50%));
+    @include rwd($screen-sm-min) {
+      width: 33%;
+      bottom: unset;
+      padding: 0 2em;
     }
   }
 
-  &.paragraph--position--center {
-    .paragraph--info {
-      @include alignment-info(left, 50%, translate(-50%, -50%));
+  @include rwd($screen-sm-min) {
+    &.paragraph--position--left {
+      .paragraph--info {
+        @include alignment-info(left, 0, translate(0%, -50%));
+      }
     }
-  }
 
-  &.paragraph--position--right {
-    .paragraph--info {
-      @include alignment-info(right, 0, translate(0%, -50%));
+    &.paragraph--position--center {
+      .paragraph--info {
+        @include alignment-info(left, 50%, translate(-50%, -50%));
+      }
+    }
+
+    &.paragraph--position--right {
+      .paragraph--info {
+        @include alignment-info(right, 0, translate(0%, -50%));
+      }
+    }
+
+    &.paragraph--alignment--left {
+      .paragraph--info {
+        text-align: left;
+      }
+    }
+
+    &.paragraph--alignment--center {
+      .paragraph--info {
+        text-align: center;
+      }
+    }
+
+    &.paragraph--alignment--right {
+      .paragraph--info {
+        text-align: right;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.banner.field_alignment
     - field.field.paragraph.banner.field_color
     - field.field.paragraph.banner.field_description
     - field.field.paragraph.banner.field_image
@@ -71,6 +72,7 @@ content:
     type: string
     region: content
 hidden:
+  field_alignment: true
   field_color: true
   field_position: true
   field_zoom: true

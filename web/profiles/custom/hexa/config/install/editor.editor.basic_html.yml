@@ -17,6 +17,13 @@ settings:
             - Bold
             - Italic
         -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
           name: Linking
           items:
             - DrupalLink
@@ -40,6 +47,8 @@ settings:
           items:
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
 image_upload:
@@ -48,5 +57,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

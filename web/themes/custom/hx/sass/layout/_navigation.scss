@@ -37,6 +37,10 @@
 
         .logo {
           @include no-spacing();
+
+          img {
+            max-height: $logo-max-height;
+          }
         }
       }
 
