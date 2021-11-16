@@ -9,19 +9,19 @@
 @import "../abstracts/breakpoints";
 
 // Color preparation for the color scheme using Bootstrap variables.
-$bg: $body-bg;
-$header: $modal-header-border-color;
-$footer: $panel-footer-bg;
-$link: $navbar-default-link-color;
-$link-footer: $iron;
-$nav-bg: $navbar-default-bg;
-$active: $navbar-default-link-active-color;
-$hover-bg: $navbar-default-toggle-hover-bg;
-$dots: $code-color;
-$dots-active: $code-bg;
-$shadow: $gray-shadow;
-$text: $text-color;
-$text_hover: $navbar-default-link-hover-color;
+$bg: #ffffff;
+$header: #e5e5e5;
+$footer: #c2c2c2;
+$link: #c700b7;
+$link-footer: #c70000;
+$active: #f51167;
+$cta: #333333;
+$cta-bg: #8c8c8c;
+$dots: #c7254e;
+$dots-active: #f9f2f4;
+$shadow: #eeeeee;
+$text: #333333;
+$text_hover: #000000;
 
 @mixin nav-link-color($color, $active) {
   .nav {
@@ -41,19 +41,31 @@ $text_hover: $navbar-default-link-hover-color;
 // Page structure.
 body {
   background-color: $bg;
-}
 
-p, span, label, summary, h1, h2, h3, h4, h5, h6 {
-  color: $text;
-}
+  #fullview, #navbar {
+    p, span, label, summary, h1, h2, h3, h4, h5, h6 {
+      color: $text;
+    }
 
+    .btn-default {
+      color: $cta;
+      background-color: $cta-bg;
+      border-color: $shadow;
 
-#navbar {
-  .navbar-nav {
-    > li {
-      > a:hover {
+      &:hover {
         color: $text_hover;
         background-color: $active;
+      }
+    }
+  }
+
+  #navbar {
+    .navbar-nav {
+      > li {
+        > a:hover {
+          color: $text_hover;
+          background-color: $active;
+        }
       }
     }
   }
@@ -67,24 +79,25 @@ p, span, label, summary, h1, h2, h3, h4, h5, h6 {
   .navbar-collapse {
     border-color: $shadow;
   }
-}
 
-header, #navbar {
-  @include nav-link-color($link, $active);
-}
+  header, #navbar {
+    @include nav-link-color($link, $active);
+  }
 
-footer {
-  background-color: $footer;
-  @include nav-link-color($link-footer, $active);
+  footer {
+    background-color: $footer;
+    @include nav-link-color($link-footer, $active);
 
-  .region-footer {
-    &:after {
-      background-color: $shadow;
-    }
-
-    nav {
+    .region-footer {
       &:after {
         background-color: $shadow;
+      }
+
+      nav {
+        // @TODO: check if this is necessary in the footer.
+        /*&:after {
+          background-color: $shadow;
+        }*/
       }
     }
   }
@@ -96,27 +109,27 @@ footer {
       }
     }
   }
-}
 
-#fv-dots {
-  ul {
-    li {
-      a {
-        &:before {
-          background: $dots;
-        }
-
-        &.active {
+  #fv-dots {
+    ul {
+      li {
+        a {
           &:before {
-            background-color: $dots-active;
+            background: $dots;
+          }
+
+          &.active {
+            &:before {
+              background-color: $dots-active;
+            }
           }
         }
       }
     }
   }
-}
 
-// Icons.
-.fa-map-marker-alt, .fa-envelope, .fa-phone {
-  color: $active;
+  // Icons.
+  .fa-map-marker-alt, .fa-envelope, .fa-phone {
+    color: $active;
+  }
 }

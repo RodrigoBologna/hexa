@@ -80,6 +80,11 @@
               if ($dots.length) {
                   $dots.remove();
               }
+
+              if (this.$views.length < 2) {
+                return;
+              }
+
               var div = $("<div>").attr("id", "fv-dots").append('<ul>');
 
               if (this.options.dotsTooltips === true) {

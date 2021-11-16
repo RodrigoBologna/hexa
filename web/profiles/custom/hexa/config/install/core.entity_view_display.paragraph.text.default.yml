@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_alignment
     - field.field.paragraph.text.field_color
     - field.field.paragraph.text.field_content
     - field.field.paragraph.text.field_link
     - field.field.paragraph.text.field_position
-    - field.field.paragraph.text.field_title
     - paragraphs.paragraphs_type.text
   module:
     - link
@@ -17,7 +17,7 @@ bundle: text
 mode: default
 content:
   field_content:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       trim_length: 255
@@ -25,7 +25,7 @@ content:
     type: text_trimmed
     region: content
   field_link:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       trim_length: 128
@@ -36,14 +36,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_title:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden:
+  field_alignment: true
   field_color: true
   field_position: true

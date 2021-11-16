@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_alignment
     - field.field.paragraph.text.field_color
     - field.field.paragraph.text.field_content
     - field.field.paragraph.text.field_link
     - field.field.paragraph.text.field_position
-    - field.field.paragraph.text.field_title
     - paragraphs.paragraphs_type.text
   module:
     - color_field
@@ -17,6 +17,12 @@ targetEntityType: paragraph
 bundle: text
 mode: default
 content:
+  field_alignment:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_color:
     weight: 0
     settings:
@@ -51,15 +57,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_title:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: options_select
     region: content
 hidden:
   created: true

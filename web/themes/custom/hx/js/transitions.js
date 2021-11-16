@@ -35,6 +35,7 @@
         element: 'section, .section',
         dots: true,
         dotsPosition: 'right',
+        dotsTooltips: true,
         easing: 'ease-out',
         backToTop: true,
         offset: 0, // Not needed as the header is fixed.

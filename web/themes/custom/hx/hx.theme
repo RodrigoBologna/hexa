@@ -251,46 +251,47 @@ function hx_update_icon_mapping(&$name) {
 function hx_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
 
-  $variables['image_link'] = _hx_prepare_component_image_link($paragraph);
-  $variables['position'] = _hx_prepare_component_position($paragraph);
+  $variables['image_link'] = _hx_prepare_component($paragraph, 'link', 'field_image_link');
+  $variables['position'] = _hx_prepare_component($paragraph, 'list', 'field_position');
+  $variables['alignment'] = _hx_prepare_component($paragraph, 'list', 'field_alignment');
 }
 
 /**
- * Validate if the component field exists and is not empty.
+ * Prepare component field value to set on template level.
  */
-function _hx_validate_field($paragraph, $field_name) {
+function _hx_prepare_component($paragraph, $type, $field_name) {
   if (!$paragraph->hasField($field_name)) {
     return;
   }
 
-  return $paragraph->{$field_name}->getValue();
-}
-
-/**
- * Prepare component image link from field.
- */
-function _hx_prepare_component_image_link($paragraph) {
-  $value = _hx_validate_field($paragraph, 'field_image_link');
+  $value = $paragraph->{$field_name}->getValue();
 
   if (empty($value)) {
     return;
   }
 
+  $function_name = '_hx_prepare_component_' . $type;
+
+  if (!function_exists($function_name)) {
+    return;
+  }
+
+  return $function_name($value);
+}
+
+/**
+ * Prepare component link field.
+ */
+function _hx_prepare_component_link($value) {
   $url = reset($value);
 
-  return  Url::fromUri($url['uri'])->toString();
+  return Url::fromUri($url['uri'])->toString();
 }
 
 /**
- * Prepare component position class from field.
+ * Prepare component list field.
  */
-function _hx_prepare_component_position($paragraph) {
-  $value = _hx_validate_field($paragraph, 'field_position');
-
-  if (empty($value)) {
-    return;
-  }
-
+function _hx_prepare_component_list($value) {
   $position = reset($value);
 
   return $position['value'];
