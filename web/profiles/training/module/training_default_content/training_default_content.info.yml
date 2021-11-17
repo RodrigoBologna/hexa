@@ -1,0 +1,8 @@
+name: Training Default Content
+description: Provides the default content for the Training profile.
+package: Administration
+type: module
+core_version_requirement: ^9
+
+dependencies:
+  - default_content

@@ -26,9 +26,17 @@ function training_install_tasks(&$install_state) {
       'type' => 'form',
       'function' => 'Drupal\training\Form\ClientForm',
     ],
+    'training_import_default_content' => [
+      'display_name' => t('Install default content'),
+      'type' => 'normal',
+    ],
   ];
 
   return $tasks;
+}
+
+function training_import_default_content() {
+  \Drupal::service('default_content.importer')->importContent('training_default_content');
 }
 
 function training_define_theme() {
