@@ -1,7 +1,7 @@
-name: Hexentials
-type: profile
-description: 'Multiple profile types to structure the websites.'
-core_version_requirement: '^8.8 || ^9'
+#name: Hexentials
+#type: profile
+#description: 'Multiple profile types to structure the websites.'
+#core_version_requirement: '^8.8 || ^9'
 
 # Optional: Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.
