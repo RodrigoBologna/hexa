@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | [site:name]'
+  rights: '© Copyright 2021 - [site:name]'
+  shortlink: '[current-page:url:unaliased]'
+  canonical_url: '[current-page:url]'
