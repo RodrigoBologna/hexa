@@ -117,6 +117,10 @@ install:
   #- imagefield_slideshow # Product gallery style.
   #- imagemagick # Use this tool instead of GD2.
   - image_widget_crop
+  - imageapi_optimize
+  - imageapi_optimize_binaries
+  - imageapi_optimize_webp
+  - imageapi_optimize_webp_responsive
   #- lazy
   - libraries
   #- linkit
