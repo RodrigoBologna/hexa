@@ -28,8 +28,8 @@
         &:before {
           content: '';
           position: absolute;
-          width: 0.5em;
-          height: 0.5em;
+          width: 0.35em;
+          height: 0.35em;
           background: rgba(255, 255, 255, 0.48);
           -webkit-border-radius: 0.625em;
           -moz-border-radius: 0.625em;
@@ -41,6 +41,11 @@
           -ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
           -o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
           transition: transform 0.3s ease, background-color 0.3s ease;
+
+          @include rwd($screen-sm-min) {
+            width: 0.5em;
+            height: 0.5em;
+          }
         }
 
         &.active:before {
