@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_binaries
+    - imageapi_optimize_webp
+name: lossless_compression
+label: 'Lossless compression'
+processors:
+  6e28ddff-8ce8-44c1-9740-d4f84c11cb9e:
+    uuid: 6e28ddff-8ce8-44c1-9740-d4f84c11cb9e
+    id: pngquant
+    weight: 1
+    data:
+      manual_executable_path: ''
+      speed: 3
+      quality:
+        min: 60
+        max: 70
+  8727132a-589f-4baf-b948-d922aa33e4dd:
+    uuid: 8727132a-589f-4baf-b948-d922aa33e4dd
+    id: jpegoptim
+    weight: 2
+    data:
+      manual_executable_path: ''
+      progressive: 1
+      quality: 70
+      size: null
+  7ef8b9d2-6546-4bce-90b4-23f96f5dc194:
+    uuid: 7ef8b9d2-6546-4bce-90b4-23f96f5dc194
+    id: imageapi_optimize_webp
+    weight: 3
+    data:
+      quality: '75'
