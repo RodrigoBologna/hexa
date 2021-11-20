@@ -47,10 +47,12 @@
 #}
 {% extends "block.html.twig" %}
 
+{% set url = 'https://www.hexentials.com.br' %}
+
 {% block title %}
   {{ title_prefix }}
   {% if label %}
-    <span{{ title_attributes.addClass('block-title') }}>{{ label }}</span>
+    <span{{ title_attributes.addClass('block-title', 'powered-by-hexentials') }}>Powered by <a href="{{ url }}">Hexentials</a></span>
   {% endif %}
   {{ title_suffix }}
 {% endblock %}

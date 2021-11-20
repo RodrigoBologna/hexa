@@ -108,6 +108,14 @@ body {
         border-right: 1px solid $shadow;
       }
     }
+
+    .powered-by-hexentials {
+      a {
+        &:hover, &:focus {
+          color: $active;
+        }
+      }
+    }
   }
 
   #fv-dots {

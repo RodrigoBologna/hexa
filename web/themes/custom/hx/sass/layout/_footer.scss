@@ -72,6 +72,14 @@ footer {
           padding: 0 1em;
         }
 
+        .block {
+          .powered-by-hexentials {
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+
         label {
           @include no-spacing();
         }
