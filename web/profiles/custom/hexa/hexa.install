@@ -66,11 +66,6 @@ function hexa_install() {
  */
 function hexa_install_tasks(&$install_state) {
   $tasks = [
-    'hexa_select_active_language' => [
-      'display_name' => t('Select the active language'),
-      'type' => 'form',
-      'function' => 'Drupal\hexa\Form\ActiveLanguageForm',
-    ],
     'hexa_select_profile_type' => [
       'display_name' => t('Select the profile type'),
       'type' => 'form',
