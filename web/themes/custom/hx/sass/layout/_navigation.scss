@@ -14,12 +14,8 @@
     z-index: 99;
     @include padding-default();
 
-    @include rwd($screen-md-min) {
+    @include rwd($screen-sm-min) {
       flex-direction: row;
-    }
-
-    @include landscape {
-      height: 15vh;
     }
 
     .navbar-header {
@@ -28,7 +24,7 @@
       float: none;
       width: 100%;
 
-      @include rwd($screen-md-min) {
+      @include rwd($screen-sm-min) {
         flex: 0 0 20%;
       }
 
@@ -59,12 +55,12 @@
     > .navbar-collapse {
       @include no-spacing();
 
-      @include rwd($screen-md-min) {
+      @include rwd($screen-sm-min) {
         flex: 0 0 20%;
       }
 
       &.center {
-        @include rwd($screen-md-min) {
+        @include rwd($screen-sm-min) {
           flex: 0 0 60%;
         }
       }
