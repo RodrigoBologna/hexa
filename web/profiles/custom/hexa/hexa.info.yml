@@ -101,7 +101,7 @@ install:
   #- diff
   #- easy_breadcrumb
   #- editor_advanced_link
-  # Advanced configuration used (which doesn't need the module installation).
+  # Drupal core being used (settings.php). The module is not necessary.
   #- fast_404
   #- field_group
   - flexslider
