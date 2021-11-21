@@ -6,19 +6,7 @@ var gulp = require('gulp'),
   eslint = require('gulp-eslint'),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
-  imagemin = require('gulp-imagemin'),
-  pngquant = require('imagemin-pngquant'),
   rename = require('gulp-rename');
-
-gulp.task('imagemin', function () {
-  return gulp.src('./images/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest('./images'));
-});
 
 gulp.task('sass-bootstrap-hx', function () {
   return gulp.src('./sass/**/*.scss')
@@ -33,7 +21,7 @@ gulp.task('sass-colors', function () {
   return gulp.src('./sass/colors/_color.scss')
     .pipe(rename('color.css'))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
@@ -45,6 +33,7 @@ function isFixed(file) {
   return file.eslint != null && file.eslint.fixed;
 }
 
+// @TODO: needs work.
 gulp.task('eslint', function(){
   return gulp.src(['./js/*.js'])
     .pipe(eslint({
