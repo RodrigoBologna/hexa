@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.card
     - responsive_image.styles.full_width
   module:
+    - lazy
     - link
     - responsive_image
     - text
@@ -36,7 +37,11 @@ content:
     settings:
       responsive_image_style: full_width
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+        placeholder_style: ''
+        data_uri: false
     type: responsive_image
     region: content
   field_image_link:

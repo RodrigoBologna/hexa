@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - editor
+    - lazy
     - media
 name: 'Basic HTML'
 format: basic_html
@@ -41,6 +42,14 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  lazy_filter:
+    id: lazy_filter
+    provider: lazy
+    status: true
+    weight: 20
+    settings:
+      image: true
+      iframe: true
   media_embed:
     id: media_embed
     provider: media

@@ -296,3 +296,10 @@ function _hx_prepare_component_list($value) {
 
   return $position['value'];
 }
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function hx_preprocess_image(&$variables) {
+  $variables['attributes']['loading'] = 'lazy';
+}
