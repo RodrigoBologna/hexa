@@ -74,16 +74,16 @@ install:
   - views_ui
 # Contrib modules
   - admin_toolbar
-  #- advagg
+  - advagg
   #- advagg_bundler
   #- advagg_cdn
-  #- advagg_css_minify
+  - advagg_css_minify
   # External minify is not needed for now.
-  # - advagg_ext_minify
-  #- advagg_js_minify
+  #- advagg_ext_minify
+  - advagg_js_minify
   #- advagg_mod
   # Validator isn't needed for the production website.
-  # - advagg_validator
+  #- advagg_validator
   #- better_exposed_filters
   #- block_content_machine_name
   #- block_field
@@ -102,7 +102,7 @@ install:
   #- easy_breadcrumb
   #- editor_advanced_link
   # Advanced configuration used (which doesn't need the module installation).
-  # - fast_404
+  #- fast_404
   #- field_group
   - flexslider
   - flexslider_fields
@@ -112,11 +112,11 @@ install:
   #- ga
   - google_tag # GTM.
   # Not needed for now as the website isn't multi-language.
-  # - hreflang
+  #- hreflang
   #- http_cache_control
   #- honeypot # Spam control.
   #- imagefield_slideshow # Product gallery style.
-  #- imagemagick # Use this tool instead of GD2.
+  - imagick
   - image_widget_crop
   - imageapi_optimize
   - imageapi_optimize_binaries
@@ -134,7 +134,7 @@ install:
   - redirect_404
   #- redis
   # @TODO: temporarily disabled as it needs configuration.
-  # - search_api_solr
+  #- search_api_solr
   - simple_sitemap
   #- simple_sitemap_views
   #- single_image_formatter # Products thumbnail exhibition.

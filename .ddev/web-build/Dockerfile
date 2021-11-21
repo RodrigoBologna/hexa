@@ -11,6 +11,17 @@ RUN bash -ic "nvm install $NODE_DEFAULT_VERSION && nvm use $NODE_DEFAULT_VERSION
 RUN chmod -R ugo+w $NVM_DIR
 
 # PNGQUANT & JPEGOPTIM
-RUN apt-get update
-RUN apt-get -y install pngquant
-RUN apt-get -y install jpegoptim
+RUN apt -y update
+RUN apt -y install pngquant
+RUN apt -y install jpegoptim
+
+# JSMIN & IMAGEMAGICK
+RUN apt -y install libcurl3-openssl-dev
+RUN apt -y install php7.4-dev
+RUN apt -y install php7.4-imagick
+RUN apt -y install php-pear
+RUN pecl channel-update pecl.php.net
+RUN pecl update-channels
+RUN pecl install pecl_http
+RUN pecl install jsmin
+#RUN yum install -y ImageMagick ImageMagick-devel ImageMagick-perl # Use instead of GD2.
