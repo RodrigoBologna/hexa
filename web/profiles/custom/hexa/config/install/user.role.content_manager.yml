@@ -1,6 +1,9 @@
+uuid: 2ea6383f-7893-42d2-80ad-9a1f621f0c70
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: sR58I8Jd5Z7-j1TIx0MfVUGZsEpuV_KcEeVlXmGlgEU
 id: content_manager
 label: 'Content manager'
 weight: 4
@@ -8,19 +11,23 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer menu'
   - 'administer nodes'
   - 'administer shortcuts'
   - 'create article content'
   - 'create page content'
+  - 'create terms in tags'
   - 'delete any article content'
   - 'delete any page content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete terms in tags'
   - 'edit own page content'
+  - 'edit terms in tags'
   - 'revert article revisions'
   - 'revert page revisions'
   - 'view article revisions'
